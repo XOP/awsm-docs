@@ -2,12 +2,19 @@
 
 ## Structure
 
-apps/
+### Apps
+
 - docs
 
-packages/
+### Packages
+
 - awsm-tokens
 - awsm-ui
+
+### Aux Packages
+
+- awsm-tsconfig
+- eslint-config-awsm
 
 
 ## [LICENSE](./LICENSE)

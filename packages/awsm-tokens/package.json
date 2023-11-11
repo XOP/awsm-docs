@@ -3,5 +3,11 @@
   "version": "0.0.0",
   "author": "Evgeny Khoroshilov",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@awsm/tsconfig": "*",
+    "eslint": "^8.53.0",
+    "eslint-config-awsm": "*"
+  }
 }
