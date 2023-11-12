@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-export const rootCls = style({
+export const wrapperCls = style({
   display: 'flex',
   gap: '1rem'
 });
