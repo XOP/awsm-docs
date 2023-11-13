@@ -7,8 +7,9 @@
   "scripts": {
     "lint": "eslint \"src/**/*.ts*\"",
     "build": "yarn gen && tsc && vite build",
-    "gen": "yarn gen:vars",
-    "gen:vars": "tsx ./scripts/generateVars.cts"
+    "gen": "yarn gen:palette && yarn gen:vars",
+    "gen:vars": "tsx ./scripts/generateVars.cts",
+    "gen:palette": "tsx ./scripts/generatePaletteVars.cts"
   },
   "devDependencies": {
     "@awsm/tsconfig": "*",
