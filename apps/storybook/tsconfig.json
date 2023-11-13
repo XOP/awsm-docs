@@ -1,0 +1,10 @@
+{
+  "extends": "@awsm/tsconfig/lib-react.json",
+  "include": [
+    ".storybook/config",
+    ".storybook/helpers",
+    ".storybook/params",
+    ".storybook/preview.tsx",
+    ".storybook/main.ts"
+  ],
+}

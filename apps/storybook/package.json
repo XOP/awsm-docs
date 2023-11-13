@@ -1,0 +1,39 @@
+{
+  "name": "storybook",
+  "version": "0.0.0",
+  "author": "Evgeny Khoroshilov",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "lint": "eslint .storybook --ext ts,tsx"
+  },
+  "nx": {
+    "targets": {
+      "dev": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "build": {
+        "dependsOn": [
+          "^build"
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "@awsm/ui": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@awsm/tsconfig": "*",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vanilla-extract/vite-plugin": "^3.9.0",
+    "eslint": "^8.53.0",
+    "eslint-config-awsm": "*"
+  }
+}
