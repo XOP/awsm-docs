@@ -17,6 +17,7 @@ export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariants;
   color?: ButtonColors;
   size?: ButtonSizes;
+  disabled?: boolean;
 }
 
 const Button = React.forwardRef(function Button(
@@ -29,11 +30,17 @@ const Button = React.forwardRef(function Button(
     variant = 'solid',
     color = 'primary',
     size = 'regular',
+    disabled = false,
     ...other
   } = props;
 
   return (
-    <BaseButton {...other} ref={ref} className={clsx(className, styles)}>
+    <BaseButton
+      {...other}
+      isDisabled={disabled}
+      ref={ref}
+      className={clsx(className, styles)}
+    >
       {children}
     </BaseButton>
   );
