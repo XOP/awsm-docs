@@ -1,7 +1,7 @@
 // colors (except gamma) by tailwindcss:
 // https://github.com/tailwindlabs/tailwindcss/blob/master/src/public/colors.js
 
-export const colors = {
+export default {
   white: '#ffffff',
   black: '#000000',
   gamma: {

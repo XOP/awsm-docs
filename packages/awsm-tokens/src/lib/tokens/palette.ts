@@ -1,6 +1,6 @@
 import { parseToRgb, lighten } from 'polished';
 
-import { colors } from './colors';
+import colors from './colors';
 
 const base = {
   gamma: {
