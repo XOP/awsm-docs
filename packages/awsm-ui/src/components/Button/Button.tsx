@@ -22,7 +22,7 @@ export interface ButtonProps extends BaseButtonProps {
 
 const Button = React.forwardRef(function Button(
   props: ButtonProps,
-  ref: React.ForwardedRef<any>,
+  ref: React.ForwardedRef<any>
 ) {
   const {
     children,
@@ -39,7 +39,7 @@ const Button = React.forwardRef(function Button(
       {...other}
       isDisabled={disabled}
       ref={ref}
-      className={clsx(className, styles)}
+      className={clsx(className, styles({ variant, color, size }))}
     >
       {children}
     </BaseButton>

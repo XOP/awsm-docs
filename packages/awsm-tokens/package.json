@@ -4,6 +4,22 @@
   "author": "Evgeny Khoroshilov",
   "license": "MIT",
   "private": true,
+  "files": [
+    "dist/tokens.*",
+    "dist/css",
+    "dist/src"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/src/lib/tokens/tokens.d.ts",
+      "import": "./dist/tokens.esm.js",
+      "require": "./dist/tokens.cjs.js"
+    },
+    "./css/*": {
+      "import": "./dist/css/*",
+      "require": "./dist/css/*"
+    }
+  },
   "scripts": {
     "lint": "eslint \"src/**/*.ts*\"",
     "build": "yarn gen && tsc && vite build",
