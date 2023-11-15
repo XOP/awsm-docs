@@ -7,7 +7,7 @@ import {
   DisclosureProps as BaseDisclosureProps,
 } from '@headlessui/react';
 
-import { disclosureCls, toggleCls, contentCls } from './Disclosure.css';
+import { styles, toggleCls, contentCls } from './Disclosure.css';
 
 export type DisclosureColors = 'primary' | 'secondary';
 export type DisclosureVariants = 'regular' | 'strong';
@@ -22,7 +22,7 @@ export interface DisclosureProps extends BaseDisclosureProps<'div'> {
 
 const Disclosure = React.forwardRef(function Disclosure(
   props: DisclosureProps,
-  ref: React.ForwardedRef<any>,
+  ref: React.ForwardedRef<any>
 ) {
   const {
     className,
@@ -36,9 +36,10 @@ const Disclosure = React.forwardRef(function Disclosure(
 
   return (
     <BaseDisclosure
+      as="div"
       {...rest}
       ref={ref}
-      className={clsx(className, disclosureCls)}
+      className={clsx(className, styles({ color, variant }))}
     >
       <BaseDisclosure.Button className={toggleCls}>
         {toggle}
