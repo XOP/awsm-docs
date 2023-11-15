@@ -8,7 +8,7 @@ import {
   SwitchProps as BaseSwitchProps,
 } from '@radix-ui/react-switch';
 
-import { wrapperCls, switchCls, labelCls, thumbCls } from './Switch.css';
+import { wrapperStyles, styles, labelCls, thumbCls } from './Switch.css';
 
 export type SwitchColors = 'primary' | 'secondary';
 export type SwitchSizes = 'regular' | 'small';
@@ -20,7 +20,7 @@ export interface SwitchProps extends BaseSwitchProps {
 
 const Switch = React.forwardRef(function Switch(
   props: SwitchProps,
-  ref: React.ForwardedRef<any>,
+  ref: React.ForwardedRef<any>
 ) {
   const {
     className,
@@ -31,8 +31,8 @@ const Switch = React.forwardRef(function Switch(
   } = props;
 
   return (
-    <label className={clsx(className, wrapperCls)}>
-      <BaseSwitch {...rest} ref={ref} className={clsx(switchCls)}>
+    <label className={clsx(className, wrapperStyles({ size }))}>
+      <BaseSwitch {...rest} ref={ref} className={styles({ size, color })}>
         <SwitchThumb className={thumbCls} />
       </BaseSwitch>
       {label && <span className={labelCls}>{label}</span>}

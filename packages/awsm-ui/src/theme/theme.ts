@@ -1,7 +1,9 @@
 import { tokens } from '@awsm/tokens';
 
 const theme = {
-  ...tokens
+  ...tokens,
+
+  fontFamily: `${tokens.fontFamily.main}, ${tokens.fontFamily.fallback}`
 };
 
 export { theme }
