@@ -37,10 +37,14 @@ export const toggleCls = style({
   border: 'none',
   borderRadius: theme.radius.n,
   textAlign: 'start',
+  textDecoration: 'underline',
   fontSize: theme.fontSize.n,
   lineHeight: theme.lineHeight.normal,
   fontFamily: theme.fontFamily,
   cursor: 'pointer',
+  transition: 'background-color',
+  transitionDuration: theme.duration.short,
+  transitionTimingFunction: 'ease-in-out',
 
   selectors: {
     [`${styles.classNames.variants.variant.strong} &`]: {

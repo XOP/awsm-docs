@@ -64,6 +64,9 @@ export const styles = recipe({
       borderRadius: theme.radius.s,
       textTransform: 'uppercase',
       cursor: 'pointer',
+      transition: 'background-color',
+      transitionDuration: theme.duration.instant,
+      transitionTimingFunction: 'ease-in-out',
 
       ':disabled': {
         filter: 'grayscale(1)',
