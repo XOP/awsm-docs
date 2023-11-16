@@ -1,0 +1,96 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  showNav?: boolean;
+}
+
+const { title, showNav = true } = Astro.props;
+const isIndex = Astro.url.pathname === "/";
+
+import "@csstools/normalize.css/normalize.css";
+import "@awsm/tokens/css/tokens.css";
+
+import "../assets/css/index.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Design System Documentation" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="page">
+      <Header class="header" />
+
+      <div class="wrap">
+        <main class="main">
+          <slot />
+        </main>
+      </div>
+
+      <Footer class="footer" />
+    </div>
+  </body>
+</html>
+
+<style>
+  .page {
+    display: flex;
+    flex-flow: column nowrap;
+
+    flex: 1 1 auto;
+
+    position: relative;
+    box-sizing: border-box;
+
+    width: 100%;
+  }
+
+  .header,
+  .footer {
+    flex: 0 1 auto;
+  }
+
+  .wrap {
+    display: flex;
+    flex-flow: row nowrap;
+
+    position: relative;
+    z-index: 1;
+
+    flex: 1 1 auto;
+    box-sizing: border-box;
+
+    width: 100%;
+  }
+
+  .main {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+
+    width: 100%;
+    padding: var(--awsm-space-6) var(--awsm-space-12);
+  }
+
+  @media screen and (max-width: 480px) {
+    .main {
+      padding: var(--awsm-space-4);
+    }
+  }
+
+  .side {
+    flex: 0 1 auto;
+  }
+</style>

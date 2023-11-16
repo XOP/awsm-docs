@@ -1,0 +1,39 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<footer class:list={["footer", className]}>
+  <span
+    >AWSM DOCS - template for Design System documentation website © <a
+      href="https://github.com/XOP">XOP</a
+    > 2023</span
+  >
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    padding: var(--awsm-space-6) var(--awsm-space-8);
+
+    color: var(--awsm-color-primary-gamma-200);
+    line-height: var(--awsm-line-height-relaxed);
+    background: var(--awsm-color-primary-main);
+  }
+
+  .footer a {
+    color: var(--awsm-color-primary-gamma-200);
+  }
+
+  @media (hover: hover) {
+    .footer a:hover {
+    color: var(--awsm-color-primary-contrast);
+  }
+  }
+</style>

@@ -1,0 +1,46 @@
+---
+import Logo from "./Logo.astro";
+import TopNav from "./TopNav.astro";
+
+interface Props {
+	class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<header class:list={['header', className]}>
+  <Logo />
+  <TopNav />
+</header>
+
+<style>
+  .header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: var(--awsm-space-8);
+
+    padding: var(--awsm-space-6) var(--awsm-space-8);
+    border-bottom: var(--awsm-space-px) solid var(--awsm-color-primary-gamma-200);
+  }
+
+  .toggle {
+    position: absolute;
+    right: var(--awsm-space-8);
+    top: var(--awsm-space-6);
+  }
+
+  @media screen and (min-width: 781px) {
+    .toggle {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .header {
+      flex-flow: column;
+    }
+  }
+  
+</style>
