@@ -22,13 +22,9 @@ const { class: className } = Astro.props;
 
     padding: var(--awsm-space-6) var(--awsm-space-8);
 
-    color: var(--awsm-color-primary-gamma-200);
+    color: var(--awsm-color-text-muted);
     line-height: var(--awsm-line-height-relaxed);
-    background: var(--awsm-color-primary-main);
-  }
-
-  .footer a {
-    color: var(--awsm-color-primary-gamma-200);
+    background: var(--awsm-color-gamma-150);
   }
 
   @media screen and (max-width: 480px) {
@@ -37,9 +33,14 @@ const { class: className } = Astro.props;
     }
   }
 
+  .footer a {
+    color: var(--awsm-color-text-strong);
+    text-decoration: none;
+  }
+
   @media (hover: hover) {
     .footer a:hover {
-      color: var(--awsm-color-primary-contrast);
+      text-decoration: underline;
     }
   }
 </style>
