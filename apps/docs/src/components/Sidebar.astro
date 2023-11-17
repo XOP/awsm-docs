@@ -1,0 +1,144 @@
+---
+import {
+  getCollection,
+  type CollectionKey,
+  type CollectionEntry,
+} from "astro:content";
+
+interface Props {
+  class?: string;
+  section?: CollectionKey;
+}
+
+const { class: className, section } = Astro.props;
+
+type Entry = CollectionEntry<CollectionKey>;
+
+type NavEntry = {
+  slug?: string;
+  title?: string;
+  href?: string;
+  group?: string;
+  heading?: string;
+};
+
+let entries: Array<Entry> = [];
+let navEntries: Array<NavEntry> = [];
+
+if (section) {
+  entries = await getCollection(section);
+
+  if (section === "components") {
+    entries = entries.filter((item: Entry) => !item.slug.includes("/"));
+  }
+}
+
+navEntries = entries.map((item: Entry) => {
+  return {
+    slug: item.slug,
+    title: item.data.title,
+    href: `/${item.collection}/${item.slug}`,
+    group: item.data.group,
+  };
+});
+
+const fullSlug = Astro.url.pathname.split("/");
+let currentSlug = fullSlug.reverse()[0];
+
+if (currentSlug === "usage" || currentSlug === "accessibility") {
+  currentSlug = fullSlug[1];
+}
+---
+
+<aside class:list={["side", className]} data-handle="sidebar">
+  {
+    section && (
+      <>
+        <strong class="heading">{section}</strong>
+        <ul class="nav">
+          {navEntries.length &&
+            navEntries.map((entry: NavEntry) => {
+              const { slug, href, title, heading } = entry;
+
+              if (heading) {
+                return (
+                  <li><h3>{heading}</h3></li>
+                );
+              }
+    
+              const isHidden = slug!.split("/").length > 1;
+
+              if (isHidden) return;
+
+              return (
+                <li>
+                  <a
+                    class:list={{ active: slug === currentSlug }}
+                    href={href}
+                    title={title}
+                  >
+                    {title}
+                  </a>
+                </li>
+              );
+            })}
+        </ul>
+      </>
+    )
+  }
+</aside>
+
+<style>
+  .side {
+    box-sizing: border-box;
+    position: relative;
+    padding: var(--awsm-space-6) var(--awsm-space-8);
+
+    width: 22vw;
+    min-width: 16rem;
+
+    background: var(--awsm-color-primary-main);
+    color: var(--awsm-color-primary-contrast);
+  }
+
+  .heading {
+    display: block;
+    margin-bottom: var(--awsm-space-8);
+
+    text-transform: uppercase;
+    font-size: var(--awsm-font-size-l);
+    color: var(--awsm-color-primary-gamma-100);
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  .nav li {
+    margin: var(--awsm-space-4) 0;
+    list-style: none;
+  }
+
+  .nav li h3 {
+    margin-top: var(--awsm-space-8);
+  }
+
+  .nav a {
+    display: block;
+    color: var(--awsm-color-primary-gamma-100);
+    text-decoration: none;
+  }
+
+  @media (hover: hover) {
+    .nav a:hover {
+      color: var(--awsm-color-primary-contrast);
+      text-decoration: underline;
+    }
+  }
+
+  .nav a.active {
+    padding-left: var(--awsm-space-2);
+    border-left: var(--awsm-space-2) solid var(--awsm-color-secondary-main);
+    color: var(--awsm-color-primary-gamma-100);
+  }
+</style>

@@ -1,13 +1,17 @@
 ---
+import type { CollectionKey } from "astro:content";
+
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Sidebar from "../components/Sidebar.astro";
 
 interface Props {
   title: string;
+  section?: CollectionKey;
   showNav?: boolean;
 }
 
-const { title, showNav = true } = Astro.props;
+const { title, section, showNav = true } = Astro.props;
 const isIndex = Astro.url.pathname === "/";
 
 import "@csstools/normalize.css/normalize.css";
@@ -35,6 +39,8 @@ import "../assets/css/index.css";
       <Header class="header" />
 
       <div class="wrap">
+        {showNav && !isIndex && <Sidebar class="side" section={section} />}
+
         <main class="main">
           <slot />
         </main>
@@ -82,6 +88,12 @@ import "../assets/css/index.css";
 
     width: 100%;
     padding: var(--awsm-space-6) var(--awsm-space-12);
+  }
+
+  @media screen and (max-width: 780px) {
+    .main {
+      padding: var(--awsm-space-6) var(--awsm-space-8)
+    }
   }
 
   @media screen and (max-width: 480px) {

@@ -31,9 +31,15 @@ const { class: className } = Astro.props;
     color: var(--awsm-color-primary-gamma-200);
   }
 
+  @media screen and (max-width: 480px) {
+    .footer {
+      padding: var(--awsm-space-6) var(--awsm-space-4);
+    }
+  }
+
   @media (hover: hover) {
     .footer a:hover {
-    color: var(--awsm-color-primary-contrast);
-  }
+      color: var(--awsm-color-primary-contrast);
+    }
   }
 </style>

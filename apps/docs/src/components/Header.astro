@@ -25,6 +25,12 @@ const { class: className } = Astro.props;
     border-bottom: var(--awsm-space-px) solid var(--awsm-color-primary-gamma-200);
   }
 
+  @media screen and (max-width: 480px) {
+    .header {
+      padding: var(--awsm-space-6) var(--awsm-space-4);
+    }
+  }
+
   .toggle {
     position: absolute;
     right: var(--awsm-space-8);
