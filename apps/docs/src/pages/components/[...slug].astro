@@ -5,6 +5,8 @@ import Layout from "../../layouts/Layout.astro";
 import Content from "../../components/Content.astro";
 import ComponentNav from "../../components/ComponentNav.astro";
 
+import Examples from "../../client/Examples/Examples";
+
 import { getCollectionName } from "../../shared/utils";
 
 export const COLLECTION = "components";
@@ -34,6 +36,8 @@ const navEntries = componentEntries.map((item) => {
     title: item.data.page,
   };
 });
+
+const showExamples = entry.slug.split("/").length === 1;
 ---
 
 <Layout title={entry.data.title} section={COLLECTION}>
@@ -47,4 +51,14 @@ const navEntries = componentEntries.map((item) => {
 
     <PageContent />
   </Content>
+
+  {
+    showExamples && (
+      <Examples
+        client:only
+        componentName={entry.data.component}
+        componentDir={entry.data.dir}
+      />
+    )
+  }
 </Layout>

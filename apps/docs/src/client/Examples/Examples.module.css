@@ -1,0 +1,36 @@
+.root {
+  margin: var(--awsm-space-8) 0;
+
+  padding: 0;
+}
+
+.item {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.item + .item {
+  margin-top: var(--awsm-space-12);
+}
+
+.heading {
+  margin: 0;
+  margin-bottom: var(--awsm-space-6);
+
+  font-size: var(--awsm-font-size-l);
+  font-weight: normal;
+}
+
+.example {
+  background: var(--awsm-color-gamma-50); 
+  border: var(--awsm-space-px) solid var(--awsm-color-gamma-200);
+  border-radius: var(--awsm-radius-n);
+  overflow: auto;
+}
+
+.content {
+  padding: var(--awsm-space-8);
+  overflow: auto;
+}
