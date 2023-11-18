@@ -55,7 +55,7 @@ const showExamples = entry.slug.split("/").length === 1;
   {
     showExamples && (
       <Examples
-        client:only
+        client:only="react"
         componentName={entry.data.component}
         componentDir={entry.data.dir}
       />

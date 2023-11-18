@@ -34,3 +34,7 @@
   padding: var(--awsm-space-8);
   overflow: auto;
 }
+
+.code {
+  margin-top: var(--awsm-space-1);
+}

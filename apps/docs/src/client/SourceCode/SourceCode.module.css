@@ -1,0 +1,17 @@
+.root {
+  font-size: var(--awsm-font-size-s);
+}
+
+.code {
+  border-radius: var(--awsm-radius-n);
+
+  overflow: hidden;
+}
+
+.controls {
+  display: flex;
+  gap: var(--awsm-space-4);
+  justify-content: flex-end;
+  
+  margin-top: var(--awsm-space-2);
+}

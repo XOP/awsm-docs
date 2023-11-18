@@ -1,9 +1,10 @@
 import { useStoriesLoad } from '../../shared/hooks/useStoriesLoad';
 import { sortStories } from '../../shared/utils/sortStories.ts';
-
 import { DEFAULT } from '../../shared/globals.ts';
 
 import type { ComponentStruct, Story } from '../../shared/types.ts';
+
+import SourceCode from '../SourceCode/SourceCode.tsx';
 
 import styles from './Examples.module.css';
 
@@ -59,6 +60,9 @@ const Examples = (props: ExamplesProps) => {
               <div className={styles.content}>
                 <Variant />
               </div>
+            </div>
+            <div className={styles.code}>
+              <SourceCode>{Variant()}</SourceCode>
             </div>
           </div>
         </li>
