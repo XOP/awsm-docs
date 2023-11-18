@@ -30,6 +30,11 @@ export const COMPONENT_NAVIGATION = [
   }
 ];
 
+export const COMPONENT_GROUPS = {
+  form: 'Form',
+  content: 'Content'
+};
+
 export const DEFAULT = 'default';
 
 export const EXAMPLE_SORT_KEYS = [
@@ -41,7 +46,7 @@ export const EXAMPLE_SORT_KEYS = [
   'with'
 ];
 
-export const LS_PREFIX = 'dsd';
+export const LS_PREFIX = 'awsm';
 export const LS_KEY_META = 'meta';
 
 export const SIDEBAR_STATE = {

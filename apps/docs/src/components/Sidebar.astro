@@ -5,6 +5,8 @@ import {
   type CollectionEntry,
 } from "astro:content";
 
+import { COMPONENT_GROUPS, NAVIGATION_KEYS } from '../shared/globals';
+
 interface Props {
   class?: string;
   section?: CollectionKey;
@@ -28,7 +30,7 @@ let navEntries: Array<NavEntry> = [];
 if (section) {
   entries = await getCollection(section);
 
-  if (section === "components") {
+  if (section === NAVIGATION_KEYS.components) {
     entries = entries.filter((item: Entry) => !item.slug.includes("/"));
   }
 }
@@ -41,6 +43,23 @@ navEntries = entries.map((item: Entry) => {
     group: item.data.group,
   };
 });
+
+if (section === NAVIGATION_KEYS.components) {
+  const groupForm = navEntries.filter(
+    (item: NavEntry) => item.group === COMPONENT_GROUPS.form
+  );
+
+  const groupContent = navEntries.filter(
+    (item: NavEntry) => item.group === COMPONENT_GROUPS.content
+  );
+
+  navEntries = [
+    { heading: COMPONENT_GROUPS.form },
+    ...groupForm,
+    { heading: COMPONENT_GROUPS.content },
+    ...groupContent,
+  ];
+}
 
 const fullSlug = Astro.url.pathname.split("/");
 let currentSlug = fullSlug.reverse()[0];
