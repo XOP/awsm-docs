@@ -24,7 +24,7 @@
 }
 
 .example {
-  background: var(--awsm-color-gamma-50); 
+  background: var(--awsm-color-background-subtle);
   border: var(--awsm-space-px) solid var(--awsm-color-gamma-200);
   border-radius: var(--awsm-radius-n);
   overflow: auto;

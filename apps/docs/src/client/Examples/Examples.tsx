@@ -31,6 +31,10 @@ const Examples = (props: ExamplesProps) => {
     );
   }
 
+  if (!stories.default) {
+    return <div><h2 className={styles.heading}>No Examples Located</h2></div>
+  }
+
   const ComponentStruct: ComponentStruct = stories.default;
   const { component: AnyComponent } = ComponentStruct;
   const Component = AnyComponent as JSX.ElementType;

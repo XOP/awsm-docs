@@ -118,6 +118,11 @@ export const paletteVars = {
     "subtle": "var(--awsm-color-text-subtle)",
     "muted": "var(--awsm-color-text-muted)"
   },
+  "background": {
+    "regular": "var(--awsm-color-background-regular)",
+    "subtle": "var(--awsm-color-background-subtle)",
+    "muted": "var(--awsm-color-background-muted)"
+  },
   "shadow": "var(--awsm-color-shadow)",
   "shadowRgb": "var(--awsm-color-shadow-rgb)",
   "focusRing": "var(--awsm-color-focus-ring)"

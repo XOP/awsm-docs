@@ -132,6 +132,12 @@ export const paletteBase = {
     muted: colors.gamma[650],
   },
 
+  background: {
+    regular: colors.white,
+    subtle: colors.gamma[50],
+    muted: colors.gamma[150]
+  },
+
   shadow: colors.black,
   shadowRgb: rgbString(colors.black),
 

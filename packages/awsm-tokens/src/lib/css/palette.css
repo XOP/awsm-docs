@@ -90,6 +90,9 @@
   --awsm-color-text-regular: #232324;
   --awsm-color-text-subtle: #383839;
   --awsm-color-text-muted: #505051;
+  --awsm-color-background-regular: #ffffff;
+  --awsm-color-background-subtle: #f0f0f0;
+  --awsm-color-background-muted: #d4d4d4;
   --awsm-color-shadow: #000000;
   --awsm-color-shadow-rgb: 0, 0, 0;
   --awsm-color-focus-ring: #1e40af;
