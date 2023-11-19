@@ -5,7 +5,12 @@
 .code {
   border-radius: var(--awsm-radius-n);
 
+  height: 0;
   overflow: hidden;
+}
+
+.__open {
+  height: auto;
 }
 
 .controls {

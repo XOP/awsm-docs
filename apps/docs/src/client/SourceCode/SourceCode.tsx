@@ -1,9 +1,13 @@
 import { tokens } from '@awsm/tokens';
+import clsx from 'clsx';
 import jsxToString from 'react-element-to-jsx-string';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialOceanic } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useStore } from '@nanostores/react';
 
 import CopyCode from '../CopyCode/CopyCode';
+
+import { sourceCode, showSourceCode } from '../../store/store';
 
 import styles from './SourceCode.module.css';
 
@@ -14,12 +18,16 @@ interface SourceCodeProps {
 const SourceCode = (props: SourceCodeProps) => {
   const { children: jsxCode } = props;
 
+  const $showSource = useStore(sourceCode);
+
   const sourceCodeData = jsxToString(jsxCode);
 
   return (
     <div className={styles.root}>
       <div
-        className={styles.code}
+        className={clsx(styles.code, {
+          [styles.__open]: $showSource,
+        })}
       >
         <SyntaxHighlighter
           language="tsx"
@@ -39,6 +47,7 @@ const SourceCode = (props: SourceCodeProps) => {
         </SyntaxHighlighter>
       </div>
       <div className={styles.controls}>
+        <button onClick={() => showSourceCode(!$showSource)}>Toggle Code</button>
         <CopyCode data={sourceCodeData} />
       </div>
     </div>
