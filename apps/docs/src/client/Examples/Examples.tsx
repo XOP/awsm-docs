@@ -19,7 +19,16 @@ const Examples = (props: ExamplesProps) => {
   const [stories, isLoading] = useStoriesLoad(componentName, componentDir);
 
   if (isLoading) {
-    return <div>loading...</div>;
+    return (
+      <div className={styles.loading}>
+        {[0, 0, 0].map((_, key) => (
+          <div key={key}>
+            <span className={styles.loading_heading}></span>
+            <span className={styles.loading_body}></span>
+          </div>
+        ))}
+      </div>
+    );
   }
 
   const ComponentStruct: ComponentStruct = stories.default;

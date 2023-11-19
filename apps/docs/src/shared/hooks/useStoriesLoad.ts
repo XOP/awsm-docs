@@ -17,6 +17,11 @@ export const useStoriesLoad = (
         `../../../../../packages/awsm-ui/src/components/${componentDir}/${componentName}.stories.tsx`
       );
 
+      // debug & styling
+      // await new Promise((resolve) =>
+      //   setTimeout(() => resolve(setIsLoading(false)), 3000)
+      // );
+
       setIsLoading(false);
       setStories(_stories);
     }

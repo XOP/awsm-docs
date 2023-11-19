@@ -38,3 +38,41 @@
 .code {
   margin-top: var(--awsm-space-1);
 }
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  margin: var(--awsm-space-8) 0;
+  opacity: 1;
+  animation: loadingAnimation;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.loading_heading,
+.loading_body {
+  display: block;
+  background: var(--awsm-color-gamma-100);
+  border-radius: var(--awsm-radius-s);
+}
+
+.loading_heading {
+  width: 30%;
+  height: calc(var(--awsm-font-size-l) * var(--awsm-line-height-tight));
+  margin: var(--awsm-space-6) 0;
+}
+
+.loading_body {
+  height: 12rem;
+  margin-bottom: var(--awsm-space-16);
+}
