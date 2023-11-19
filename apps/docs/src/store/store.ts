@@ -17,6 +17,7 @@ const [getLsMeta, setLsMeta] = localStore<MetaDataStore>();
 
 // application settings
 export const sourceCode = atom<boolean>(false);
+export const sidebarState = atom<SidebarStateValues>(SIDEBAR_STATE.closed);
 
 sourceCode.listen(() => {
   setMetaStore();

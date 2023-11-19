@@ -73,35 +73,43 @@ if (currentSlug === "usage" || currentSlug === "accessibility") {
   {
     section && (
       <>
-        <strong class="heading">{section}</strong>
-        <ul class="nav">
-          {navEntries.length &&
-            navEntries.map((entry: NavEntry) => {
-              const { slug, href, title, heading } = entry;
+        <strong class="close" data-handle="close">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="m12 10.586l4.95-4.95l1.415 1.415l-4.95 4.95l4.95 4.95l-1.415 1.414l-4.95-4.95l-4.95 4.95l-1.413-1.415l4.95-4.95l-4.95-4.95L7.05 5.638l4.95 4.95Z"/>
+          </svg>
+        </strong>
 
-              if (heading) {
+        <div class="content">
+          <strong class="heading">{section}</strong>
+          <ul class="nav">
+            {navEntries.length &&
+              navEntries.map((entry: NavEntry) => {
+                const { slug, href, title, heading } = entry;
+
+                if (heading) {
+                  return (
+                    <li><h3>{heading}</h3></li>
+                  );
+                }
+      
+                const isHidden = slug!.split("/").length > 1;
+
+                if (isHidden) return;
+
                 return (
-                  <li><h3>{heading}</h3></li>
+                  <li>
+                    <a
+                      class:list={{ active: slug === currentSlug }}
+                      href={href}
+                      title={title}
+                    >
+                      {title}
+                    </a>
+                  </li>
                 );
-              }
-    
-              const isHidden = slug!.split("/").length > 1;
-
-              if (isHidden) return;
-
-              return (
-                <li>
-                  <a
-                    class:list={{ active: slug === currentSlug }}
-                    href={href}
-                    title={title}
-                  >
-                    {title}
-                  </a>
-                </li>
-              );
-            })}
-        </ul>
+              })}
+          </ul>
+        </div>
       </>
     )
   }
@@ -120,6 +128,40 @@ if (currentSlug === "usage" || currentSlug === "accessibility") {
     color: var(--awsm-color-primary-contrast);
   }
 
+  @media screen and (max-width: 780px) {
+    .side {
+      position: fixed;
+      top: 0;
+      padding-top: var(--awsm-space-8); 
+      z-index: 1000;
+      width: 100vw;
+      height: 100%;
+      overflow: scroll;
+    }
+
+    .side.__state-opened {
+      left: 0;
+    }
+  
+    .side.__state-closed {
+      left: auto;
+      right: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .side {
+      padding-inline: var(--awsm-space-4);
+    }
+  }
+
+  @media screen and (min-width: 781px) {
+    .content {
+      position: sticky;
+      top: var(--awsm-space-6);
+    }
+  }
+
   .heading {
     display: block;
     margin-bottom: var(--awsm-space-8);
@@ -127,6 +169,34 @@ if (currentSlug === "usage" || currentSlug === "accessibility") {
     text-transform: uppercase;
     font-size: var(--awsm-font-size-l);
     color: var(--awsm-color-primary-gamma-100);
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    top: var(--awsm-space-6);
+    right: var(--awsm-space-8);
+
+    font-size: var(--awsm-font-size-xl);
+    line-height: 0;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 781px) {
+    .close {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .close {
+      right: var(--awsm-space-4);
+    }
+  }
+
+  .close > svg {
+    width: 1em;
+    height: 1em;
   }
 
   .nav {
@@ -161,3 +231,36 @@ if (currentSlug === "usage" || currentSlug === "accessibility") {
     color: var(--awsm-color-primary-gamma-100);
   }
 </style>
+
+<script>
+  import { sidebarState } from '../store/store';
+  import { SIDEBAR_STATE } from '../shared/globals';
+
+  const sidebar = document.querySelector('[data-handle="sidebar"]');
+
+  if (sidebar) {
+    const clsPrefix = '__state-';
+
+    sidebarState.subscribe((state) => {
+      const cls: string[] = [];
+
+      for (let className of sidebar.classList.values()) {
+        if (className.includes(clsPrefix)) continue;
+
+        cls.push(className);
+      }
+
+      sidebar.className = '';
+      sidebar.classList.add(...cls);
+      sidebar.classList.add(`${clsPrefix}${state}`);
+    });
+
+    const close = document.querySelector('[data-handle="close"]');
+
+    if (close) {
+      close.addEventListener('click', () => {
+        sidebarState.set(SIDEBAR_STATE.closed);
+      });
+    }
+  }
+</script>
