@@ -97,7 +97,15 @@ import "../assets/css/index.css";
     box-sizing: border-box;
     flex: 1 0 auto;
     width: 100%;
-    padding: var(--awsm-space-6) var(--awsm-space-12);
+    max-width: 90ch;
+    padding: var(--awsm-space-10) var(--awsm-space-16);
+  }
+
+  @media screen and (max-width: 1280px) {
+    .content {
+      max-width: none;
+      padding: var(--awsm-space-6) var(--awsm-space-8);
+    }
   }
 
   @media screen and (max-width: 780px) {
