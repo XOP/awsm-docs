@@ -5,6 +5,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialOceanic } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useStore } from '@nanostores/react';
 
+import Button from '../Button/Button';
 import CopyCode from '../CopyCode/CopyCode';
 
 import { sourceCode, showSourceCode } from '../../store/store';
@@ -47,7 +48,7 @@ const SourceCode = (props: SourceCodeProps) => {
         </SyntaxHighlighter>
       </div>
       <div className={styles.controls}>
-        <button onClick={() => showSourceCode(!$showSource)}>Toggle Code</button>
+        <Button onClick={() => showSourceCode(!$showSource)}>Toggle Code</Button>
         <CopyCode data={sourceCodeData} />
       </div>
     </div>

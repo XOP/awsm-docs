@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import Button from '../Button/Button';
+
 interface CopyCodeProps {
   data: string;
   className?: string;
@@ -29,9 +31,9 @@ const CopyCode = (props: CopyCodeProps) => {
 
   return (
     <span className={className}>
-      <button onClick={handleCopy} title="Copy to clipboard" disabled={busy}>
+      <Button onClick={handleCopy} title="Copy to clipboard" disabled={busy}>
         {busy ? 'Copied!' : 'Copy'}
-      </button>
+      </Button>
     </span>
   );
 };
