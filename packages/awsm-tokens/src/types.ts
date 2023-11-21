@@ -1,2 +1,1 @@
-export type Tokens = any;
-
+export type Tokens = Record<string | number, any>;
