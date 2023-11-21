@@ -1,12 +1,22 @@
-import { paletteVars as palette } from './palette.vars';
+import { paletteVars } from './palette.vars';
+import { paletteBase } from './palette.out';
+import { detailsVars, detailsBase } from './details';
+
 import { default as content } from './content';
 import { default as sizes } from './sizes';
-import { default as details } from './details';
 
 export const tokens = {
-  color: palette,
+  color: paletteVars,
 
   ...content,
   ...sizes,
-  ...details,
+  ...detailsVars,
+};
+
+export const tokensBase = {
+  color: paletteBase,
+
+  ...content,
+  ...sizes,
+  ...detailsBase,
 };

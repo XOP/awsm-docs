@@ -14,7 +14,7 @@ const memo = '/* generated file, do not edit directly */\n\n';
     const cssOutputFile = `${vars[i]}.css`;
     let cssOutput = memo;
 
-    const content = await import(`../src/lib/tokens/${vars[i]}`);
+    const content = await import(`../src/lib/tokens/entries/${vars[i]}`);
     const cssData = convertVarsToCss(content, ...commonPrefix);
 
     cssOutput += `:root `;

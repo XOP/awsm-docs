@@ -11,23 +11,36 @@ const commonPrefix = [prefix, category];
 const cssOutputDir = path.resolve(process.cwd(), 'src/lib/css');
 const cssOutputFile = 'palette.css';
 
-const varsOutputDir = path.resolve(process.cwd(), 'src/lib/tokens');
+const outputDir = path.resolve(process.cwd(), 'src/lib/tokens');
+const tsOutputFile = 'palette.out.ts';
 const varsOutputFile = 'palette.vars.ts';
 
 const memo = '/* generated file, do not edit directly */\n\n';
 
-let cssData = '';
+let tsOutput = memo;
 let cssOutput = memo;
 let varsOutput = memo;
 let varsData;
 let paletteData: object | null = null;
 
+// TS pre-compilation
+Object.entries(palette).forEach(([moduleName, moduleData]) => {
+  tsOutput += `export const ${moduleName} = ${JSON.stringify(
+    moduleData,
+    null,
+    2
+  )};\n\n`;
+});
+
 // CSS variables compilation
 Object.entries(palette).forEach(([moduleName, moduleData]) => {
+  let cssData = '';
   const r = moduleName.match(/([A-Z])\w+/);
 
   if (!r && !r?.[0]) {
-    throw new Error('❌ check exported palette name, it should satisfy the pattern "paletteFooBar"');
+    throw new Error(
+      '❌ check exported palette name, it should satisfy the pattern "paletteFooBar"'
+    );
   }
 
   cssData += convertVarsToCss(moduleData, ...commonPrefix);
@@ -51,11 +64,16 @@ Object.entries(palette).forEach(([moduleName, moduleData]) => {
 // CSS variables references compilation
 if (paletteData) {
   varsData = convertVarsToRefs(paletteData, ...commonPrefix);
-  varsOutput += `export const paletteVars = ${JSON.stringify(varsData, null, 2)};`;
+  varsOutput += `export const paletteVars = ${JSON.stringify(
+    varsData,
+    null,
+    2
+  )};`;
 }
 
 (async () => {
+  await fs.writeFile(path.resolve(outputDir, tsOutputFile), tsOutput);
+  await fs.writeFile(path.resolve(outputDir, varsOutputFile), varsOutput);
   await fs.writeFile(path.resolve(cssOutputDir, cssOutputFile), cssOutput);
-  await fs.writeFile(path.resolve(varsOutputDir, varsOutputFile), varsOutput);
   console.log('✅ palette variables generated!');
 })();
