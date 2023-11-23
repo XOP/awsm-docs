@@ -42,7 +42,7 @@ import "../assets/css/index.css";
         {showNav && !isIndex && <Sidebar class="side" section={section} />}
 
         <main class="main">
-          <div class="content">
+          <div class={`content${isIndex ? ' __index' : ''}`}>
             <slot />
           </div>
 
@@ -102,10 +102,17 @@ import "../assets/css/index.css";
     padding: var(--awsm-space-10) var(--awsm-space-16);
   }
 
+  .content.__index {
+    margin: 0 auto;
+  }
+
   @media screen and (max-width: 1280px) {
     .content {
-      max-width: none;
       padding: var(--awsm-space-6) var(--awsm-space-8);
+    }
+
+    .content:not(.__index) {
+      max-width: none;
     }
   }
 

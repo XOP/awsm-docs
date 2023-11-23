@@ -7,9 +7,12 @@ import Content from "../components/Content.astro";
 import { NAVIGATION, NAVIGATION_KEYS } from "../shared/globals";
 
 const descriptionMap = {
-  [NAVIGATION_KEYS.core]: "Core visual elements that stitch together seamless user experiences",
-  [NAVIGATION_KEYS.patterns]: "Recurring solutions that address common design problems",
-  [NAVIGATION_KEYS.components]: "Reusable building blocks and utilities of our design system",
+  [NAVIGATION_KEYS.core]:
+    "Core visual elements that stitch together seamless user experiences",
+  [NAVIGATION_KEYS.patterns]:
+    "Recurring solutions that address common design problems",
+  [NAVIGATION_KEYS.components]:
+    "Reusable building blocks and utilities of our design system",
 };
 
 const entries = NAVIGATION.map((item) => {
@@ -22,23 +25,25 @@ const entries = NAVIGATION.map((item) => {
 ---
 
 <Layout title="Welcome to AWSM Docs" showNav={false}>
-  <Container>
-    <Content>
-      <h2>Welcome to AWSM Docs!</h2>
+  <Content>
+    <h2>Welcome to AWSM Docs!</h2>
 
-      <p>
-        <big>
-          AWSM is made to kickstart and slingshot your Design System website
-          without much hustle. It's fast to develop and build, open for
-          customization and easy to maintain by non-developers.
-        </big>
-      </p>
+    <p>
+      <big>
+        AWSM is made to kickstart and slingshot your Design System website
+        without much hustle. It's fast to develop and build, open for
+        customization and easy to maintain by non-developers.
+      </big>
+    </p>
 
-      <p>
-        Welcome to the central nexus for [YOUR DS BRAND], the definitive resource for our design language and digital identity. Here, you will find everything required to navigate and utilize our design system, empowering you to craft consistent, accessible, and engaging customer experiences that resonate with our brand's core values.
-      </p>
-    </Content>
+    <p>
+      Welcome to the central nexus for [YOUR DS BRAND], the definitive resource
+      for our design language and digital identity. Here, you will find
+      everything required to navigate and utilize our design system, empowering
+      you to craft consistent, accessible, and engaging customer experiences
+      that resonate with our brand's core values.
+    </p>
+  </Content>
 
-    <IntroNav data={entries} />
-  </Container>
+  <IntroNav data={entries} />
 </Layout>
