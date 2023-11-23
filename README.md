@@ -50,6 +50,9 @@ First is scoped CSS in Astro, along with CSS modules. Both rely on CSS variables
 Second is using [vanilla-extract](https://vanilla-extract.style/) as a styling engine,  
 to showcase CSS-in-JS application and JS tokens as well. 
 
+There should be no issues with using alternative styling engines,  
+however you would need to adjust settings in `.storybook` and `astro.config.mjs`.
+
 
 ## Usage
 
