@@ -19,6 +19,7 @@
   margin: 0;
   margin-bottom: var(--awsm-space-6);
 
+  color: var(--awsm-color-text-regular);
   font-size: var(--awsm-font-size-l);
   font-weight: normal;
 }
@@ -62,7 +63,7 @@
 .loading_heading,
 .loading_body {
   display: block;
-  background: var(--awsm-color-gamma-100);
+  background: var(--awsm-color-gamma-200);
   border-radius: var(--awsm-radius-s);
 }
 

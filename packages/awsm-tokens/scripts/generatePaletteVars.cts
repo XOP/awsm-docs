@@ -53,7 +53,7 @@ Object.entries(palette).forEach(([moduleName, moduleData]) => {
   }
 
   cssOutput += `:root[data-${prefix}='${paletteName}'] `;
-  cssOutput += `{\n${cssData}\n}\n`;
+  cssOutput += `{\n${cssData}\n}\n\n`;
 
   // for reference building this only needs to be done once
   if (!paletteData) {
