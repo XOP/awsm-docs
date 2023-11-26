@@ -15,6 +15,8 @@ import type { Preview } from '@storybook/react';
 
 import { StoryDecorator } from './helpers/StoryDecorator';
 
+import { backgrounds } from './params/backgrounds';
+
 // ui core styles
 import '../../../packages/awsm-ui/src/assets/styles/index.css';
 
@@ -22,6 +24,8 @@ import '../../../packages/awsm-ui/src/assets/styles/index.css';
 
 const preview: Preview = {
   parameters: {
+    backgrounds,
+
     actions: { argTypesRegex: '^on[A-Z].*' },
 
     controls: {
@@ -46,7 +50,7 @@ const preview: Preview = {
 
             // extracting from render:
             const _parsed = code.match(
-              /(?<=render: \(\) => )<+(.|\n)+>+(?=,)?/
+              /(?<=render: \(\) => )<+(.|\n)+>+(?=,)?/,
             );
 
             if (_parsed && _parsed[0]) {
