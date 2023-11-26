@@ -1,6 +1,6 @@
 /* generated file, do not edit directly */
 
-:root[data-awsm='electric'] {
+:root, :root[data-awsm='electric'] {
   --awsm-color-gamma-50: #f0f0f0;
   --awsm-color-gamma-100: #e2e2e2;
   --awsm-color-gamma-150: #d4d4d4;

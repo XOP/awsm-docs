@@ -11,7 +11,9 @@ import {
   Stories,
 } from '@storybook/blocks';
 
-import type { Preview } from '@storybook/react';
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
+
+import type { Preview, ReactRenderer } from '@storybook/react';
 
 import { StoryDecorator } from './helpers/StoryDecorator';
 
@@ -81,6 +83,15 @@ const preview: Preview = {
         <Story />
       </StoryDecorator>
     ),
+
+    withThemeByDataAttribute<ReactRenderer>({
+      themes: {
+        electric: 'electric',
+        ultraviolet: 'ultraviolet',
+      },
+      defaultTheme: 'electric',
+      attributeName: 'data-awsm',
+    }),
   ],
 };
 
