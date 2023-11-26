@@ -151,33 +151,33 @@ export const paletteUltraviolet = {
     "950": "#f0f0f0"
   },
   "primary": {
-    "main": "#2563eb",
+    "main": "#c026d3",
     "mainRgb": "37, 99, 235",
-    "tint": "#3b82f6",
-    "shade": "#1e40af",
-    "tone": "#1d4ed8",
+    "tint": "#e879f9",
+    "shade": "#86198f",
+    "tone": "#a21caf",
     "contrast": "#ffffff",
     "gamma": {
-      "100": "#5484ef",
-      "200": "#82a6f4",
-      "300": "#b1c7f8",
-      "400": "#e0e9fc",
-      "500": "#fff"
+      "100": "#fefafe",
+      "200": "#f2cff6",
+      "300": "#e6a3ef",
+      "400": "#db78e7",
+      "500": "#cf4ddf"
     }
   },
   "secondary": {
-    "main": "#65a30d",
-    "mainRgb": "101, 163, 13",
-    "tint": "#a3e635",
-    "shade": "#4d7c0f",
-    "tone": "#3f6212",
-    "contrast": "#000000",
+    "main": "#0891b2",
+    "mainRgb": "8, 145, 178",
+    "tint": "#22d3ee",
+    "shade": "#0e7490",
+    "tone": "#155e75",
+    "contrast": "#ffffff",
     "gamma": {
-      "100": "#82d211",
-      "200": "#9cee28",
-      "300": "#b2f257",
-      "400": "#c8f587",
-      "500": "#ddf9b6"
+      "100": "#bdf0fc",
+      "200": "#8ce5fa",
+      "300": "#5bd9f8",
+      "400": "#2bcef5",
+      "500": "#0ab9e3"
     }
   },
   "safe": {

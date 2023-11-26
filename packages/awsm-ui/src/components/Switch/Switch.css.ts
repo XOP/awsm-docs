@@ -14,7 +14,7 @@ export const $borderSize = theme.space.px;
 
 const colors: { [key in SwitchColors]: StyleRule } = {
   primary: {
-    backgroundColor: theme.color.primary.gamma[100],
+    backgroundColor: theme.color.primary.gamma[200],
 
     selectors: {
       ['&[data-state="checked"]']: {
@@ -23,7 +23,7 @@ const colors: { [key in SwitchColors]: StyleRule } = {
     },
   },
   secondary: {
-    backgroundColor: theme.color.secondary.gamma[200],
+    backgroundColor: theme.color.secondary.gamma[100],
 
     selectors: {
       ['&[data-state="checked"]']: {
@@ -97,7 +97,7 @@ export const thumbCls = style({
   left: $thumbOffset,
   width: $thumbSize,
   height: $thumbSize,
-  backgroundColor: theme.color.gamma[500],
+  backgroundColor: theme.color.gamma[450],
   borderRadius: theme.radius.round,
   boxShadow: theme.shadow.small,
   transitionProperty: 'transform',
@@ -120,6 +120,7 @@ export const thumbCls = style({
 });
 
 export const labelCls = style({
+  color: theme.color.text.regular,
   userSelect: 'none',
 
   selectors: {
