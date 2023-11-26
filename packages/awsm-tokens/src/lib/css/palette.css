@@ -1,6 +1,6 @@
 /* generated file, do not edit directly */
 
-:root, :root[data-awsm='base'] {
+:root[data-awsm='electric'] {
   --awsm-color-gamma-50: #f0f0f0;
   --awsm-color-gamma-100: #e2e2e2;
   --awsm-color-gamma-150: #d4d4d4;
@@ -99,7 +99,7 @@
 
 }
 
-:root[data-awsm='dark'] {
+:root[data-awsm='ultraviolet'] {
   --awsm-color-gamma-50: #0c0c0e;
   --awsm-color-gamma-100: #18181a;
   --awsm-color-gamma-150: #232324;

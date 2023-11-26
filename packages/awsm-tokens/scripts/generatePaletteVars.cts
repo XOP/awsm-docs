@@ -48,7 +48,7 @@ Object.entries(palette).forEach(([moduleName, moduleData]) => {
   const paletteName = r![0].toLowerCase();
 
   // for default palette without data-* attribute
-  if (/base/.test(paletteName)) {
+  if (/electric/.test(paletteName)) {
     cssOutput += `:root, `;
   }
 

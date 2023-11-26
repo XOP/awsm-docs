@@ -1,5 +1,5 @@
 import { paletteVars } from './palette.vars';
-import { paletteBase } from './palette.out';
+import { paletteElectric, paletteUltraviolet } from './palette.out';
 
 import type { Tokens } from '../../types';
 
@@ -37,9 +37,16 @@ export const detailsVars = {
   selection: selectionTokens(paletteVars),
 };
 
-export const detailsBase = {
+export const detailsElectric = {
   duration,
-  shadow: shadowTokens(paletteBase),
-  focus: focusTokens(paletteBase),
-  selection: selectionTokens(paletteBase),
+  shadow: shadowTokens(paletteElectric),
+  focus: focusTokens(paletteElectric),
+  selection: selectionTokens(paletteElectric),
+};
+
+export const detailsUltraviolet = {
+  duration,
+  shadow: shadowTokens(paletteUltraviolet),
+  focus: focusTokens(paletteUltraviolet),
+  selection: selectionTokens(paletteUltraviolet),
 };

@@ -141,7 +141,7 @@ export const styles = recipe({
       },
       style: {
         backgroundColor: 'transparent',
-        color: theme.color.primary.shade,
+        color: theme.color.text.regular,
         borderColor: theme.color.primary.main,
         ':hover': {
           backgroundColor: theme.color.primary.gamma[200],
@@ -151,7 +151,7 @@ export const styles = recipe({
         },
         ':disabled': {
           backgroundColor: 'transparent',
-          color: theme.color.primary.shade,
+          color: theme.color.text.muted,
           borderColor: theme.color.primary.main,
         },
       },
@@ -163,7 +163,7 @@ export const styles = recipe({
       },
       style: {
         backgroundColor: 'transparent',
-        color: theme.color.secondary.contrast,
+        color: theme.color.text.regular,
         borderColor: theme.color.secondary.tone,
         ':hover': {
           backgroundColor: theme.color.secondary.gamma[300],
@@ -173,7 +173,7 @@ export const styles = recipe({
         },
         ':disabled': {
           backgroundColor: 'transparent',
-          color: theme.color.secondary.contrast,
+          color: theme.color.text.muted,
           borderColor: theme.color.secondary.tone,
         },
       },
@@ -186,7 +186,7 @@ export const styles = recipe({
       },
       style: {
         backgroundColor: 'transparent',
-        color: theme.color.primary.shade,
+        color: theme.color.text.strong,
         ':hover': {
           backgroundColor: theme.color.primary.gamma[200],
         },
@@ -195,7 +195,7 @@ export const styles = recipe({
         },
         ':disabled': {
           backgroundColor: 'transparent',
-          color: theme.color.primary.shade,
+          color: theme.color.text.muted,
         },
       },
     },
@@ -206,7 +206,7 @@ export const styles = recipe({
       },
       style: {
         backgroundColor: 'transparent',
-        color: theme.color.secondary.contrast,
+        color: theme.color.text.strong,
         ':hover': {
           backgroundColor: theme.color.secondary.gamma[300],
         },
@@ -215,7 +215,7 @@ export const styles = recipe({
         },
         ':disabled': {
           backgroundColor: 'transparent',
-          color: theme.color.secondary.contrast,
+          color: theme.color.text.muted,
         },
       },
     },

@@ -1,6 +1,6 @@
 /* generated file, do not edit directly */
 
-export const paletteBase = {
+export const paletteElectric = {
   "gamma": {
     "50": "#f0f0f0",
     "100": "#e2e2e2",
@@ -128,7 +128,7 @@ export const paletteBase = {
   "focusRing": "#1e40af"
 };
 
-export const paletteDark = {
+export const paletteUltraviolet = {
   "gamma": {
     "50": "#0c0c0e",
     "100": "#18181a",

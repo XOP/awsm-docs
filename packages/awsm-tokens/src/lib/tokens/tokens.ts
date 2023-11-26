@@ -1,6 +1,6 @@
 import { paletteVars } from './palette.vars';
-import { paletteBase } from './palette.out';
-import { detailsVars, detailsBase } from './details';
+import { paletteElectric, paletteUltraviolet } from './palette.out';
+import { detailsVars, detailsElectric, detailsUltraviolet } from './details';
 
 import { default as content } from './content';
 import { default as sizes } from './sizes';
@@ -13,10 +13,18 @@ export const tokens = {
   ...detailsVars,
 };
 
-export const tokensBase = {
-  color: paletteBase,
+export const tokensElectric = {
+  color: paletteElectric,
 
   ...content,
   ...sizes,
-  ...detailsBase,
+  ...detailsElectric,
+};
+
+export const tokensUltraviolet = {
+  color: paletteUltraviolet,
+
+  ...content,
+  ...sizes,
+  ...detailsUltraviolet,
 };

@@ -2,7 +2,7 @@ import { parseToRgb, lighten } from 'polished';
 
 import colors from './colors';
 
-export const paletteBase = {
+export const paletteElectric = {
   gamma: {
     '50': colors.gamma[50],
     '100': colors.gamma[100],
@@ -140,7 +140,7 @@ export const paletteBase = {
   focusRing: colors.blue[800],
 };
 
-export const paletteDark = {
+export const paletteUltraviolet = {
   gamma: {
     '50': colors.gamma[950],
     '100': colors.gamma[900],

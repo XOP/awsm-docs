@@ -1,1 +1,5 @@
-export { tokens, tokensBase } from '../lib/tokens/tokens';
+export {
+  tokens,
+  tokensElectric,
+  tokensUltraviolet,
+} from '../lib/tokens/tokens';
