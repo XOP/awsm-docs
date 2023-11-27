@@ -1,4 +1,4 @@
-import { parseToRgb, lighten } from 'polished';
+import { parseToRgb, lighten, darken } from 'polished';
 
 import colors from './colors';
 
@@ -33,27 +33,35 @@ export const paletteElectric = {
     tone: colors.blue[900],
     contrast: colors.white,
     gamma: {
-      '100': lighten(0.5, colors.blue[700]),
-      '200': lighten(0.4, colors.blue[700]),
-      '300': lighten(0.3, colors.blue[700]),
-      '400': lighten(0.2, colors.blue[700]),
-      '500': lighten(0.1, colors.blue[700]),
+      '100': lighten(0.45, colors.blue[700]),
+      '200': lighten(0.35, colors.blue[700]),
+      '300': lighten(0.25, colors.blue[700]),
+      '400': lighten(0.15, colors.blue[700]),
+      '500': lighten(0.05, colors.blue[700]),
+      '600': darken(0.1, colors.blue[700]),
+      '700': darken(0.2, colors.blue[700]),
+      '800': darken(0.3, colors.blue[700]),
+      '900': darken(0.4, colors.blue[700]),
     },
   },
 
   secondary: {
-    main: colors.lime[400],
-    mainRgb: rgbString(colors.lime[400]),
-    tint: colors.lime[300],
+    main: colors.lime[500],
+    mainRgb: rgbString(colors.lime[500]),
+    tint: colors.lime[400],
     shade: colors.lime[800],
     tone: colors.lime[600],
     contrast: colors.black,
     gamma: {
-      '100': lighten(0.5, colors.lime[400]),
-      '200': lighten(0.4, colors.lime[400]),
-      '300': lighten(0.3, colors.lime[400]),
-      '400': lighten(0.2, colors.lime[400]),
-      '500': lighten(0.1, colors.lime[400]),
+      '100': lighten(0.45, colors.lime[500]),
+      '200': lighten(0.35, colors.lime[500]),
+      '300': lighten(0.25, colors.lime[500]),
+      '400': lighten(0.15, colors.lime[500]),
+      '500': lighten(0.05, colors.lime[500]),
+      '600': darken(0.1, colors.lime[500]),
+      '700': darken(0.2, colors.lime[500]),
+      '800': darken(0.3, colors.lime[500]),
+      '900': darken(0.4, colors.lime[500]),
     },
   },
 
@@ -64,13 +72,6 @@ export const paletteElectric = {
     shade: colors.green[900],
     tone: colors.green[800],
     contrast: colors.white,
-    gamma: {
-      '100': lighten(0.5, colors.green[600]),
-      '200': lighten(0.4, colors.green[600]),
-      '300': lighten(0.3, colors.green[600]),
-      '400': lighten(0.2, colors.green[600]),
-      '500': lighten(0.1, colors.green[600]),
-    },
   },
 
   alert: {
@@ -80,13 +81,6 @@ export const paletteElectric = {
     shade: colors.red[900],
     tone: colors.red[800],
     contrast: colors.white,
-    gamma: {
-      '100': lighten(0.5, colors.red[700]),
-      '200': lighten(0.4, colors.red[700]),
-      '300': lighten(0.3, colors.red[700]),
-      '400': lighten(0.2, colors.red[700]),
-      '500': lighten(0.1, colors.red[700]),
-    },
   },
 
   info: {
@@ -96,13 +90,6 @@ export const paletteElectric = {
     shade: colors.sky[900],
     tone: colors.sky[800],
     contrast: colors.white,
-    gamma: {
-      '100': lighten(0.5, colors.sky[700]),
-      '200': lighten(0.4, colors.sky[700]),
-      '300': lighten(0.3, colors.sky[700]),
-      '400': lighten(0.2, colors.sky[700]),
-      '500': lighten(0.1, colors.sky[700]),
-    },
   },
 
   warning: {
@@ -112,13 +99,6 @@ export const paletteElectric = {
     shade: colors.amber[900],
     tone: colors.amber[800],
     contrast: colors.white,
-    gamma: {
-      '100': lighten(0.5, colors.amber[600]),
-      '200': lighten(0.4, colors.amber[600]),
-      '300': lighten(0.3, colors.amber[600]),
-      '400': lighten(0.2, colors.amber[600]),
-      '500': lighten(0.1, colors.amber[600]),
-    },
   },
 
   text: {
@@ -171,27 +151,35 @@ export const paletteUltraviolet = {
     tone: colors.fuchsia[700],
     contrast: colors.white,
     gamma: {
-      '100': lighten(0.5, colors.fuchsia[600]),
-      '200': lighten(0.4, colors.fuchsia[600]),
-      '300': lighten(0.3, colors.fuchsia[600]),
-      '400': lighten(0.2, colors.fuchsia[600]),
-      '500': lighten(0.1, colors.fuchsia[600]),
+      '100': darken(0.4, colors.fuchsia[600]),
+      '200': darken(0.3, colors.fuchsia[600]),
+      '300': darken(0.2, colors.fuchsia[600]),
+      '400': darken(0.1, colors.fuchsia[600]),
+      '500': lighten(0.05, colors.fuchsia[600]),
+      '600': lighten(0.15, colors.fuchsia[600]),
+      '700': lighten(0.25, colors.fuchsia[600]),
+      '800': lighten(0.35, colors.fuchsia[600]),
+      '900': lighten(0.45, colors.fuchsia[600]),
     },
   },
 
   secondary: {
-    main: colors.cyan[600],
-    mainRgb: rgbString(colors.cyan[600]),
-    tint: colors.cyan[400],
-    shade: colors.cyan[700],
+    main: colors.cyan[400],
+    mainRgb: rgbString(colors.cyan[400]),
+    tint: colors.cyan[300],
+    shade: colors.cyan[600],
     tone: colors.cyan[800],
-    contrast: colors.white,
+    contrast: colors.black,
     gamma: {
-      '100': lighten(0.5, colors.cyan[600]),
-      '200': lighten(0.4, colors.cyan[600]),
-      '300': lighten(0.3, colors.cyan[600]),
-      '400': lighten(0.2, colors.cyan[600]),
-      '500': lighten(0.1, colors.cyan[600]),
+      '100': darken(0.4, colors.cyan[400]),
+      '200': darken(0.3, colors.cyan[400]),
+      '300': darken(0.2, colors.cyan[400]),
+      '400': darken(0.1, colors.cyan[400]),
+      '500': lighten(0.05, colors.cyan[400]),
+      '600': lighten(0.15, colors.cyan[400]),
+      '700': lighten(0.25, colors.cyan[400]),
+      '800': lighten(0.35, colors.cyan[400]),
+      '900': lighten(0.45, colors.cyan[400]),
     },
   },
 
@@ -202,13 +190,6 @@ export const paletteUltraviolet = {
     shade: colors.green[900],
     tone: colors.green[800],
     contrast: colors.white,
-    gamma: {
-      '100': lighten(0.1, colors.green[600]),
-      '200': lighten(0.2, colors.green[600]),
-      '300': lighten(0.3, colors.green[600]),
-      '400': lighten(0.4, colors.green[600]),
-      '500': lighten(0.5, colors.green[600]),
-    },
   },
 
   alert: {
@@ -218,13 +199,6 @@ export const paletteUltraviolet = {
     shade: colors.red[900],
     tone: colors.red[800],
     contrast: colors.white,
-    gamma: {
-      '100': lighten(0.1, colors.red[700]),
-      '200': lighten(0.2, colors.red[700]),
-      '300': lighten(0.3, colors.red[700]),
-      '400': lighten(0.4, colors.red[700]),
-      '500': lighten(0.5, colors.red[700]),
-    },
   },
 
   info: {
@@ -234,13 +208,6 @@ export const paletteUltraviolet = {
     shade: colors.sky[900],
     tone: colors.sky[800],
     contrast: colors.white,
-    gamma: {
-      '100': lighten(0.1, colors.sky[700]),
-      '200': lighten(0.2, colors.sky[700]),
-      '300': lighten(0.3, colors.sky[700]),
-      '400': lighten(0.4, colors.sky[700]),
-      '500': lighten(0.5, colors.sky[700]),
-    },
   },
 
   warning: {
@@ -250,13 +217,6 @@ export const paletteUltraviolet = {
     shade: colors.amber[900],
     tone: colors.amber[800],
     contrast: colors.white,
-    gamma: {
-      '100': lighten(0.1, colors.amber[600]),
-      '200': lighten(0.2, colors.amber[600]),
-      '300': lighten(0.3, colors.amber[600]),
-      '400': lighten(0.4, colors.amber[600]),
-      '500': lighten(0.5, colors.amber[600]),
-    },
   },
 
   text: {

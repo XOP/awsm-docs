@@ -34,7 +34,11 @@ export const paletteVars = {
       "200": "var(--awsm-color-primary-gamma-200)",
       "300": "var(--awsm-color-primary-gamma-300)",
       "400": "var(--awsm-color-primary-gamma-400)",
-      "500": "var(--awsm-color-primary-gamma-500)"
+      "500": "var(--awsm-color-primary-gamma-500)",
+      "600": "var(--awsm-color-primary-gamma-600)",
+      "700": "var(--awsm-color-primary-gamma-700)",
+      "800": "var(--awsm-color-primary-gamma-800)",
+      "900": "var(--awsm-color-primary-gamma-900)"
     }
   },
   "secondary": {
@@ -49,7 +53,11 @@ export const paletteVars = {
       "200": "var(--awsm-color-secondary-gamma-200)",
       "300": "var(--awsm-color-secondary-gamma-300)",
       "400": "var(--awsm-color-secondary-gamma-400)",
-      "500": "var(--awsm-color-secondary-gamma-500)"
+      "500": "var(--awsm-color-secondary-gamma-500)",
+      "600": "var(--awsm-color-secondary-gamma-600)",
+      "700": "var(--awsm-color-secondary-gamma-700)",
+      "800": "var(--awsm-color-secondary-gamma-800)",
+      "900": "var(--awsm-color-secondary-gamma-900)"
     }
   },
   "safe": {
@@ -58,14 +66,7 @@ export const paletteVars = {
     "tint": "var(--awsm-color-safe-tint)",
     "shade": "var(--awsm-color-safe-shade)",
     "tone": "var(--awsm-color-safe-tone)",
-    "contrast": "var(--awsm-color-safe-contrast)",
-    "gamma": {
-      "100": "var(--awsm-color-safe-gamma-100)",
-      "200": "var(--awsm-color-safe-gamma-200)",
-      "300": "var(--awsm-color-safe-gamma-300)",
-      "400": "var(--awsm-color-safe-gamma-400)",
-      "500": "var(--awsm-color-safe-gamma-500)"
-    }
+    "contrast": "var(--awsm-color-safe-contrast)"
   },
   "alert": {
     "main": "var(--awsm-color-alert-main)",
@@ -73,14 +74,7 @@ export const paletteVars = {
     "tint": "var(--awsm-color-alert-tint)",
     "shade": "var(--awsm-color-alert-shade)",
     "tone": "var(--awsm-color-alert-tone)",
-    "contrast": "var(--awsm-color-alert-contrast)",
-    "gamma": {
-      "100": "var(--awsm-color-alert-gamma-100)",
-      "200": "var(--awsm-color-alert-gamma-200)",
-      "300": "var(--awsm-color-alert-gamma-300)",
-      "400": "var(--awsm-color-alert-gamma-400)",
-      "500": "var(--awsm-color-alert-gamma-500)"
-    }
+    "contrast": "var(--awsm-color-alert-contrast)"
   },
   "info": {
     "main": "var(--awsm-color-info-main)",
@@ -88,14 +82,7 @@ export const paletteVars = {
     "tint": "var(--awsm-color-info-tint)",
     "shade": "var(--awsm-color-info-shade)",
     "tone": "var(--awsm-color-info-tone)",
-    "contrast": "var(--awsm-color-info-contrast)",
-    "gamma": {
-      "100": "var(--awsm-color-info-gamma-100)",
-      "200": "var(--awsm-color-info-gamma-200)",
-      "300": "var(--awsm-color-info-gamma-300)",
-      "400": "var(--awsm-color-info-gamma-400)",
-      "500": "var(--awsm-color-info-gamma-500)"
-    }
+    "contrast": "var(--awsm-color-info-contrast)"
   },
   "warning": {
     "main": "var(--awsm-color-warning-main)",
@@ -103,14 +90,7 @@ export const paletteVars = {
     "tint": "var(--awsm-color-warning-tint)",
     "shade": "var(--awsm-color-warning-shade)",
     "tone": "var(--awsm-color-warning-tone)",
-    "contrast": "var(--awsm-color-warning-contrast)",
-    "gamma": {
-      "100": "var(--awsm-color-warning-gamma-100)",
-      "200": "var(--awsm-color-warning-gamma-200)",
-      "300": "var(--awsm-color-warning-gamma-300)",
-      "400": "var(--awsm-color-warning-gamma-400)",
-      "500": "var(--awsm-color-warning-gamma-500)"
-    }
+    "contrast": "var(--awsm-color-warning-contrast)"
   },
   "text": {
     "strong": "var(--awsm-color-text-strong)",

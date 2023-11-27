@@ -14,7 +14,7 @@ export const $borderSize = theme.space.px;
 
 const colors: { [key in SwitchColors]: StyleRule } = {
   primary: {
-    backgroundColor: theme.color.primary.gamma[200],
+    backgroundColor: theme.color.primary.gamma[100],
 
     selectors: {
       ['&[data-state="checked"]']: {
@@ -69,7 +69,7 @@ export const styles = recipe({
     width: calc($trackSize, calc.x($thumbOffset, 2), calc.x($borderSize, 2)),
     height: calc($thumbSize, calc.x($thumbOffset, 2), calc.x($borderSize, 2)),
     borderRadius: theme.radius.pill,
-    border: `${$borderSize} solid ${theme.color.gamma[400]}`,
+    border: `${$borderSize} solid ${theme.color.gamma[500]}`,
 
     ':focus-visible': {
       outline: `${theme.space['0.5']} solid`,
@@ -97,7 +97,7 @@ export const thumbCls = style({
   left: $thumbOffset,
   width: $thumbSize,
   height: $thumbSize,
-  backgroundColor: theme.color.gamma[450],
+  backgroundColor: theme.color.gamma[600],
   borderRadius: theme.radius.round,
   boxShadow: theme.shadow.small,
   transitionProperty: 'transform',

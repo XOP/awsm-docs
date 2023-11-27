@@ -99,10 +99,10 @@ export const styles = recipe({
         color: theme.color.primary.contrast,
         borderColor: theme.color.primary.main,
         ':hover': {
-          backgroundColor: theme.color.primary.gamma[500],
+          backgroundColor: theme.color.primary.gamma[400],
         },
         ':active': {
-          backgroundColor: theme.color.primary.gamma[400],
+          backgroundColor: theme.color.primary.gamma[600],
         },
         ':disabled': {
           backgroundColor: theme.color.primary.main,
@@ -121,10 +121,10 @@ export const styles = recipe({
         color: theme.color.secondary.contrast,
         borderColor: theme.color.secondary.main,
         ':hover': {
-          backgroundColor: theme.color.secondary.gamma[500],
+          backgroundColor: theme.color.secondary.gamma[400],
         },
         ':active': {
-          backgroundColor: theme.color.secondary.gamma[300],
+          backgroundColor: theme.color.secondary.gamma[600],
         },
         ':disabled': {
           backgroundColor: theme.color.secondary.main,
@@ -144,10 +144,10 @@ export const styles = recipe({
         color: theme.color.primary.main,
         borderColor: theme.color.primary.main,
         ':hover': {
-          backgroundColor: theme.color.primary.gamma[200],
+          backgroundColor: theme.color.primary.gamma[100],
         },
         ':active': {
-          backgroundColor: theme.color.primary.gamma[300],
+          backgroundColor: theme.color.primary.gamma[200],
         },
         ':disabled': {
           backgroundColor: 'transparent',
@@ -166,10 +166,10 @@ export const styles = recipe({
         color: theme.color.secondary.shade,
         borderColor: theme.color.secondary.tone,
         ':hover': {
-          backgroundColor: theme.color.secondary.gamma[300],
+          backgroundColor: theme.color.secondary.gamma[100],
         },
         ':active': {
-          backgroundColor: theme.color.secondary.gamma[400],
+          backgroundColor: theme.color.secondary.gamma[200],
         },
         ':disabled': {
           backgroundColor: 'transparent',
@@ -188,10 +188,10 @@ export const styles = recipe({
         backgroundColor: 'transparent',
         color: theme.color.primary.main,
         ':hover': {
-          backgroundColor: theme.color.primary.gamma[200],
+          backgroundColor: theme.color.primary.gamma[100],
         },
         ':active': {
-          backgroundColor: theme.color.primary.gamma[300],
+          backgroundColor: theme.color.primary.gamma[200],
         },
         ':disabled': {
           backgroundColor: 'transparent',
@@ -208,10 +208,10 @@ export const styles = recipe({
         backgroundColor: 'transparent',
         color: theme.color.secondary.shade,
         ':hover': {
-          backgroundColor: theme.color.secondary.gamma[300],
+          backgroundColor: theme.color.secondary.gamma[100],
         },
         ':active': {
-          backgroundColor: theme.color.secondary.gamma[400],
+          backgroundColor: theme.color.secondary.gamma[200],
         },
         ':disabled': {
           backgroundColor: 'transparent',

@@ -37,7 +37,6 @@ export const toggleCls = style({
   border: 'none',
   borderRadius: theme.radius.n,
   textAlign: 'start',
-  textDecoration: 'underline',
   fontSize: theme.fontSize.n,
   lineHeight: theme.lineHeight.normal,
   fontFamily: theme.fontFamily,
@@ -53,7 +52,7 @@ export const toggleCls = style({
 
     [`${styles.classNames.variants.color.primary}.${styles.classNames.variants.variant.regular} &`]:
       {
-        color: theme.color.primary.main,
+        color: theme.color.text.regular,
         backgroundColor: theme.color.primary.gamma[100],
       },
     [`${styles.classNames.variants.color.primary}.${styles.classNames.variants.variant.regular} &:hover`]:
@@ -63,32 +62,32 @@ export const toggleCls = style({
 
     [`${styles.classNames.variants.color.primary}.${styles.classNames.variants.variant.strong} &`]:
       {
-        color: theme.color.primary.shade,
-        backgroundColor: theme.color.primary.gamma[200],
+        color: theme.color.primary.contrast,
+        backgroundColor: theme.color.primary.gamma[500],
       },
     [`${styles.classNames.variants.color.primary}.${styles.classNames.variants.variant.strong} &:hover`]:
       {
-        backgroundColor: theme.color.primary.gamma[300],
+        backgroundColor: theme.color.primary.gamma[600],
       },
 
     [`${styles.classNames.variants.color.secondary}.${styles.classNames.variants.variant.regular} &`]:
       {
-        color: theme.color.secondary.shade,
-        backgroundColor: theme.color.secondary.gamma[200],
+        color: theme.color.text.regular,
+        backgroundColor: theme.color.secondary.gamma[100],
       },
     [`${styles.classNames.variants.color.secondary}.${styles.classNames.variants.variant.regular} &:hover`]:
       {
-        backgroundColor: theme.color.secondary.gamma[300],
+        backgroundColor: theme.color.secondary.gamma[200],
       },
 
     [`${styles.classNames.variants.color.secondary}.${styles.classNames.variants.variant.strong} &`]:
       {
-        color: theme.color.secondary.shade,
-        backgroundColor: theme.color.secondary.gamma[300],
+        color: theme.color.secondary.contrast,
+        backgroundColor: theme.color.secondary.gamma[500],
       },
     [`${styles.classNames.variants.color.secondary}.${styles.classNames.variants.variant.strong} &:hover`]:
       {
-        backgroundColor: theme.color.secondary.gamma[400],
+        backgroundColor: theme.color.secondary.gamma[600],
       },
   },
 });

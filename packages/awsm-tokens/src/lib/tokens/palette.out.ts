@@ -30,26 +30,34 @@ export const paletteElectric = {
     "tone": "#1e3a8a",
     "contrast": "#ffffff",
     "gamma": {
-      "100": "#f6f8fe",
-      "200": "#c9d5f8",
-      "300": "#9cb3f2",
-      "400": "#6f90ec",
-      "500": "#426de6"
+      "100": "#e0e7fb",
+      "200": "#b3c4f5",
+      "300": "#86a1ef",
+      "400": "#597fe9",
+      "500": "#2c5ce3",
+      "600": "#173eab",
+      "700": "#112e7e",
+      "800": "#0b1d51",
+      "900": "#050d24"
     }
   },
   "secondary": {
-    "main": "#a3e635",
-    "mainRgb": "163, 230, 53",
-    "tint": "#bef264",
+    "main": "#84cc16",
+    "mainRgb": "132, 204, 22",
+    "tint": "#a3e635",
     "shade": "#3f6212",
     "tone": "#65a30d",
     "contrast": "#000000",
     "gamma": {
-      "100": "#fff",
-      "200": "#f6fceb",
-      "300": "#e1f7bd",
-      "400": "#ccf190",
-      "500": "#b8ec62"
+      "100": "#e8face",
+      "200": "#d3f5a0",
+      "300": "#bef072",
+      "400": "#a9eb44",
+      "500": "#93e318",
+      "600": "#669e11",
+      "700": "#48700c",
+      "800": "#2b4207",
+      "900": "#0d1402"
     }
   },
   "safe": {
@@ -58,14 +66,7 @@ export const paletteElectric = {
     "tint": "#22c55e",
     "shade": "#14532d",
     "tone": "#166534",
-    "contrast": "#ffffff",
-    "gamma": {
-      "100": "#c1f7d5",
-      "200": "#94f1b6",
-      "300": "#67eb98",
-      "400": "#3be479",
-      "500": "#1cd05e"
-    }
+    "contrast": "#ffffff"
   },
   "alert": {
     "main": "#b91c1c",
@@ -73,14 +74,7 @@ export const paletteElectric = {
     "tint": "#dc2626",
     "shade": "#7f1d1d",
     "tone": "#991b1b",
-    "contrast": "#ffffff",
-    "gamma": {
-      "100": "#f9dbdb",
-      "200": "#f3aeae",
-      "300": "#ec8282",
-      "400": "#e55656",
-      "500": "#df2929"
-    }
+    "contrast": "#ffffff"
   },
   "info": {
     "main": "#0369a1",
@@ -88,14 +82,7 @@ export const paletteElectric = {
     "tint": "#0ea5e9",
     "shade": "#0c4a6e",
     "tone": "#075985",
-    "contrast": "#ffffff",
-    "gamma": {
-      "100": "#a6defd",
-      "200": "#74ccfc",
-      "300": "#42bafb",
-      "400": "#0fa7fb",
-      "500": "#048ad3"
-    }
+    "contrast": "#ffffff"
   },
   "warning": {
     "main": "#d97706",
@@ -103,14 +90,7 @@ export const paletteElectric = {
     "tint": "#fbbf24",
     "shade": "#78350f",
     "tone": "#92400e",
-    "contrast": "#ffffff",
-    "gamma": {
-      "100": "#fef0e0",
-      "200": "#fdd8ae",
-      "300": "#fbc17d",
-      "400": "#faa94b",
-      "500": "#f99119"
-    }
+    "contrast": "#ffffff"
   },
   "text": {
     "strong": "#0c0c0e",
@@ -158,26 +138,34 @@ export const paletteUltraviolet = {
     "tone": "#a21caf",
     "contrast": "#ffffff",
     "gamma": {
-      "100": "#fefafe",
-      "200": "#f2cff6",
-      "300": "#e6a3ef",
-      "400": "#db78e7",
-      "500": "#cf4ddf"
+      "100": "#230726",
+      "200": "#4a0f51",
+      "300": "#71167d",
+      "400": "#991ea8",
+      "500": "#c937db",
+      "600": "#d563e3",
+      "700": "#e08eeb",
+      "800": "#ecb9f2",
+      "900": "#f8e4fa"
     }
   },
   "secondary": {
-    "main": "#0891b2",
-    "mainRgb": "8, 145, 178",
-    "tint": "#22d3ee",
-    "shade": "#0e7490",
+    "main": "#22d3ee",
+    "mainRgb": "34, 211, 238",
+    "tint": "#67e8f9",
+    "shade": "#0891b2",
     "tone": "#155e75",
-    "contrast": "#ffffff",
+    "contrast": "#000000",
     "gamma": {
-      "100": "#bdf0fc",
-      "200": "#8ce5fa",
-      "300": "#5bd9f8",
-      "400": "#2bcef5",
-      "500": "#0ab9e3"
+      "100": "#05373f",
+      "200": "#08616f",
+      "300": "#0c8b9e",
+      "400": "#10b4cd",
+      "500": "#3ad8f0",
+      "600": "#69e1f3",
+      "700": "#98ebf7",
+      "800": "#c8f4fb",
+      "900": "#f7fdfe"
     }
   },
   "safe": {
@@ -186,14 +174,7 @@ export const paletteUltraviolet = {
     "tint": "#22c55e",
     "shade": "#14532d",
     "tone": "#166534",
-    "contrast": "#ffffff",
-    "gamma": {
-      "100": "#1cd05e",
-      "200": "#3be479",
-      "300": "#67eb98",
-      "400": "#94f1b6",
-      "500": "#c1f7d5"
-    }
+    "contrast": "#ffffff"
   },
   "alert": {
     "main": "#b91c1c",
@@ -201,14 +182,7 @@ export const paletteUltraviolet = {
     "tint": "#dc2626",
     "shade": "#7f1d1d",
     "tone": "#991b1b",
-    "contrast": "#ffffff",
-    "gamma": {
-      "100": "#df2929",
-      "200": "#e55656",
-      "300": "#ec8282",
-      "400": "#f3aeae",
-      "500": "#f9dbdb"
-    }
+    "contrast": "#ffffff"
   },
   "info": {
     "main": "#0369a1",
@@ -216,14 +190,7 @@ export const paletteUltraviolet = {
     "tint": "#0ea5e9",
     "shade": "#0c4a6e",
     "tone": "#075985",
-    "contrast": "#ffffff",
-    "gamma": {
-      "100": "#048ad3",
-      "200": "#0fa7fb",
-      "300": "#42bafb",
-      "400": "#74ccfc",
-      "500": "#a6defd"
-    }
+    "contrast": "#ffffff"
   },
   "warning": {
     "main": "#d97706",
@@ -231,14 +198,7 @@ export const paletteUltraviolet = {
     "tint": "#fbbf24",
     "shade": "#78350f",
     "tone": "#92400e",
-    "contrast": "#ffffff",
-    "gamma": {
-      "100": "#f99119",
-      "200": "#faa94b",
-      "300": "#fbc17d",
-      "400": "#fdd8ae",
-      "500": "#fef0e0"
-    }
+    "contrast": "#ffffff"
   },
   "text": {
     "strong": "#f0f0f0",
