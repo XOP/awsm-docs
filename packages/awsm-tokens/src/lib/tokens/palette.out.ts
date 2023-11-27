@@ -25,9 +25,9 @@ export const paletteElectric = {
   "primary": {
     "main": "#1d4ed8",
     "mainRgb": "29, 78, 216",
-    "tint": "#3b82f6",
-    "shade": "#172554",
-    "tone": "#1e3a8a",
+    "tint": "#557ae1",
+    "shade": "#153aa2",
+    "tone": "#355ac2",
     "contrast": "#ffffff",
     "gamma": {
       "100": "#e0e7fb",
@@ -44,9 +44,9 @@ export const paletteElectric = {
   "secondary": {
     "main": "#84cc16",
     "mainRgb": "132, 204, 22",
-    "tint": "#a3e635",
-    "shade": "#3f6212",
-    "tone": "#65a30d",
+    "tint": "#a2d850",
+    "shade": "#639910",
+    "tone": "#83b930",
     "contrast": "#000000",
     "gamma": {
       "100": "#e8face",
@@ -63,33 +63,33 @@ export const paletteElectric = {
   "safe": {
     "main": "#16a34a",
     "mainRgb": "22, 163, 74",
-    "tint": "#22c55e",
-    "shade": "#14532d",
-    "tone": "#166534",
+    "tint": "#50ba77",
+    "shade": "#107a37",
+    "tone": "#309a57",
     "contrast": "#ffffff"
   },
   "alert": {
     "main": "#b91c1c",
     "mainRgb": "185, 28, 28",
-    "tint": "#dc2626",
-    "shade": "#7f1d1d",
-    "tone": "#991b1b",
+    "tint": "#ca5454",
+    "shade": "#8a1515",
+    "tone": "#aa3535",
     "contrast": "#ffffff"
   },
   "info": {
     "main": "#0369a1",
     "mainRgb": "3, 105, 161",
-    "tint": "#0ea5e9",
-    "shade": "#0c4a6e",
-    "tone": "#075985",
+    "tint": "#428eb8",
+    "shade": "#024e78",
+    "tone": "#226e98",
     "contrast": "#ffffff"
   },
   "warning": {
     "main": "#d97706",
     "mainRgb": "217, 119, 6",
-    "tint": "#fbbf24",
-    "shade": "#78350f",
-    "tone": "#92400e",
+    "tint": "#e29944",
+    "shade": "#a25904",
+    "tone": "#c27924",
     "contrast": "#ffffff"
   },
   "text": {
@@ -133,9 +133,9 @@ export const paletteUltraviolet = {
   "primary": {
     "main": "#c026d3",
     "mainRgb": "37, 99, 235",
-    "tint": "#e879f9",
-    "shade": "#86198f",
-    "tone": "#a21caf",
+    "tint": "#cf5cde",
+    "shade": "#901c9e",
+    "tone": "#b03cbe",
     "contrast": "#ffffff",
     "gamma": {
       "100": "#230726",
@@ -152,9 +152,9 @@ export const paletteUltraviolet = {
   "secondary": {
     "main": "#22d3ee",
     "mainRgb": "34, 211, 238",
-    "tint": "#67e8f9",
-    "shade": "#0891b2",
-    "tone": "#155e75",
+    "tint": "#59def2",
+    "shade": "#199eb2",
+    "tone": "#39bed2",
     "contrast": "#000000",
     "gamma": {
       "100": "#05373f",
@@ -171,33 +171,33 @@ export const paletteUltraviolet = {
   "safe": {
     "main": "#16a34a",
     "mainRgb": "22, 163, 74",
-    "tint": "#22c55e",
-    "shade": "#14532d",
-    "tone": "#166534",
+    "tint": "#50ba77",
+    "shade": "#107a37",
+    "tone": "#309a57",
     "contrast": "#ffffff"
   },
   "alert": {
     "main": "#b91c1c",
     "mainRgb": "185, 28, 28",
-    "tint": "#dc2626",
-    "shade": "#7f1d1d",
-    "tone": "#991b1b",
+    "tint": "#ca5454",
+    "shade": "#8a1515",
+    "tone": "#aa3535",
     "contrast": "#ffffff"
   },
   "info": {
     "main": "#0369a1",
     "mainRgb": "3, 105, 161",
-    "tint": "#0ea5e9",
-    "shade": "#0c4a6e",
-    "tone": "#075985",
+    "tint": "#428eb8",
+    "shade": "#024e78",
+    "tone": "#226e98",
     "contrast": "#ffffff"
   },
   "warning": {
     "main": "#d97706",
     "mainRgb": "217, 119, 6",
-    "tint": "#fbbf24",
-    "shade": "#78350f",
-    "tone": "#92400e",
+    "tint": "#e29944",
+    "shade": "#a25904",
+    "tone": "#c27924",
     "contrast": "#ffffff"
   },
   "text": {

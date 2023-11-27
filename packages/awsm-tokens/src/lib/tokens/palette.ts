@@ -1,4 +1,4 @@
-import { parseToRgb, lighten, darken } from 'polished';
+import { parseToRgb, lighten, darken, shade, tint, mix } from 'polished';
 
 import colors from './colors';
 
@@ -28,9 +28,9 @@ export const paletteElectric = {
   primary: {
     main: colors.blue[700],
     mainRgb: rgbString(colors.blue[700]),
-    tint: colors.blue[500],
-    shade: colors.blue[950],
-    tone: colors.blue[900],
+    tint: tint(0.25, colors.blue[700]),
+    shade: shade(0.25, colors.blue[700]),
+    tone: tone(0.25, colors.blue[700]),
     contrast: colors.white,
     gamma: {
       '100': lighten(0.45, colors.blue[700]),
@@ -48,9 +48,9 @@ export const paletteElectric = {
   secondary: {
     main: colors.lime[500],
     mainRgb: rgbString(colors.lime[500]),
-    tint: colors.lime[400],
-    shade: colors.lime[800],
-    tone: colors.lime[600],
+    tint: tint(0.25, colors.lime[500]),
+    shade: shade(0.25, colors.lime[500]),
+    tone: tone(0.25, colors.lime[500]),
     contrast: colors.black,
     gamma: {
       '100': lighten(0.45, colors.lime[500]),
@@ -68,36 +68,36 @@ export const paletteElectric = {
   safe: {
     main: colors.green[600],
     mainRgb: rgbString(colors.green[600]),
-    tint: colors.green[500],
-    shade: colors.green[900],
-    tone: colors.green[800],
+    tint: tint(0.25, colors.green[600]),
+    shade: shade(0.25, colors.green[600]),
+    tone: tone(0.25, colors.green[600]),
     contrast: colors.white,
   },
 
   alert: {
     main: colors.red[700],
     mainRgb: rgbString(colors.red[700]),
-    tint: colors.red[600],
-    shade: colors.red[900],
-    tone: colors.red[800],
+    tint: tint(0.25, colors.red[700]),
+    shade: shade(0.25, colors.red[700]),
+    tone: tone(0.25, colors.red[700]),
     contrast: colors.white,
   },
 
   info: {
     main: colors.sky[700],
     mainRgb: rgbString(colors.sky[700]),
-    tint: colors.sky[500],
-    shade: colors.sky[900],
-    tone: colors.sky[800],
+    tint: tint(0.25, colors.sky[700]),
+    shade: shade(0.25, colors.sky[700]),
+    tone: tone(0.25, colors.sky[700]),
     contrast: colors.white,
   },
 
   warning: {
     main: colors.amber[600],
     mainRgb: rgbString(colors.amber[600]),
-    tint: colors.amber[400],
-    shade: colors.amber[900],
-    tone: colors.amber[800],
+    tint: tint(0.25, colors.amber[600]),
+    shade: shade(0.25, colors.amber[600]),
+    tone: tone(0.25, colors.amber[600]),
     contrast: colors.white,
   },
 
@@ -146,9 +146,9 @@ export const paletteUltraviolet = {
   primary: {
     main: colors.fuchsia[600],
     mainRgb: rgbString(colors.blue[600]),
-    tint: colors.fuchsia[400],
-    shade: colors.fuchsia[800],
-    tone: colors.fuchsia[700],
+    tint: tint(0.25, colors.fuchsia[600]),
+    shade: shade(0.25, colors.fuchsia[600]),
+    tone: tone(0.25, colors.fuchsia[600]),
     contrast: colors.white,
     gamma: {
       '100': darken(0.4, colors.fuchsia[600]),
@@ -166,9 +166,9 @@ export const paletteUltraviolet = {
   secondary: {
     main: colors.cyan[400],
     mainRgb: rgbString(colors.cyan[400]),
-    tint: colors.cyan[300],
-    shade: colors.cyan[600],
-    tone: colors.cyan[800],
+    tint: tint(0.25, colors.cyan[400]),
+    shade: shade(0.25, colors.cyan[400]),
+    tone: tone(0.25, colors.cyan[400]),
     contrast: colors.black,
     gamma: {
       '100': darken(0.4, colors.cyan[400]),
@@ -186,36 +186,36 @@ export const paletteUltraviolet = {
   safe: {
     main: colors.green[600],
     mainRgb: rgbString(colors.green[600]),
-    tint: colors.green[500],
-    shade: colors.green[900],
-    tone: colors.green[800],
+    tint: tint(0.25, colors.green[600]),
+    shade: shade(0.25, colors.green[600]),
+    tone: tone(0.25, colors.green[600]),
     contrast: colors.white,
   },
 
   alert: {
     main: colors.red[700],
     mainRgb: rgbString(colors.red[700]),
-    tint: colors.red[600],
-    shade: colors.red[900],
-    tone: colors.red[800],
+    tint: tint(0.25, colors.red[700]),
+    shade: shade(0.25, colors.red[700]),
+    tone: tone(0.25, colors.red[700]),
     contrast: colors.white,
   },
 
   info: {
     main: colors.sky[700],
     mainRgb: rgbString(colors.sky[700]),
-    tint: colors.sky[500],
-    shade: colors.sky[900],
-    tone: colors.sky[800],
+    tint: tint(0.25, colors.sky[700]),
+    shade: shade(0.25, colors.sky[700]),
+    tone: tone(0.25, colors.sky[700]),
     contrast: colors.white,
   },
 
   warning: {
     main: colors.amber[600],
     mainRgb: rgbString(colors.amber[600]),
-    tint: colors.amber[400],
-    shade: colors.amber[900],
-    tone: colors.amber[800],
+    tint: tint(0.25, colors.amber[600]),
+    shade: shade(0.25, colors.amber[600]),
+    tone: tone(0.25, colors.amber[600]),
     contrast: colors.white,
   },
 
@@ -242,4 +242,8 @@ function rgbString(color: string) {
   const rgb = parseToRgb(color);
 
   return `${rgb.red}, ${rgb.green}, ${rgb.blue}`;
+}
+
+function tone(amount: number | string, color: string) {
+  return mix(amount, 'rgb(128, 128, 128)', color);
 }

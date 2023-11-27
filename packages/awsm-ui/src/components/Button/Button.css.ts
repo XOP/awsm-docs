@@ -141,7 +141,7 @@ export const styles = recipe({
       },
       style: {
         backgroundColor: 'transparent',
-        color: theme.color.primary.main,
+        color: theme.color.primary.gamma[700],
         borderColor: theme.color.primary.main,
         ':hover': {
           backgroundColor: theme.color.primary.gamma[100],
@@ -163,7 +163,7 @@ export const styles = recipe({
       },
       style: {
         backgroundColor: 'transparent',
-        color: theme.color.secondary.shade,
+        color: theme.color.secondary.gamma[700],
         borderColor: theme.color.secondary.tone,
         ':hover': {
           backgroundColor: theme.color.secondary.gamma[100],
@@ -186,7 +186,7 @@ export const styles = recipe({
       },
       style: {
         backgroundColor: 'transparent',
-        color: theme.color.primary.main,
+        color: theme.color.primary.gamma[700],
         ':hover': {
           backgroundColor: theme.color.primary.gamma[100],
         },
@@ -206,7 +206,7 @@ export const styles = recipe({
       },
       style: {
         backgroundColor: 'transparent',
-        color: theme.color.secondary.shade,
+        color: theme.color.secondary.gamma[700],
         ':hover': {
           backgroundColor: theme.color.secondary.gamma[100],
         },
