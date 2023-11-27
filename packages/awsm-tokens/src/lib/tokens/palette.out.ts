@@ -208,8 +208,8 @@ export const paletteUltraviolet = {
   },
   "background": {
     "regular": "#18181a",
-    "subtle": "#2d2d2e",
-    "muted": "#444445"
+    "subtle": "#232324",
+    "muted": "#383839"
   },
   "shadow": "#000000",
   "shadowRgb": "0, 0, 0",

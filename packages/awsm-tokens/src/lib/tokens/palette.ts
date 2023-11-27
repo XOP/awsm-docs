@@ -228,8 +228,8 @@ export const paletteUltraviolet = {
 
   background: {
     regular: colors.gamma[900],
-    subtle: colors.gamma[800],
-    muted: colors.gamma[700]
+    subtle: colors.gamma[850],
+    muted: colors.gamma[750]
   },
 
   shadow: colors.black,

@@ -36,7 +36,7 @@ const { page = COLLECTION, data } = Astro.props;
     align-items: center;
     margin-bottom: var(--awsm-space-8);
     margin-top: calc(-1 * var(--awsm-space-4));
-    background: var(--awsm-color-secondary-tone);
+    background: var(--awsm-color-secondary-main);
   }
 
   .nav a {
@@ -50,11 +50,11 @@ const { page = COLLECTION, data } = Astro.props;
 
   @media (hover: hover) {
     .nav a:hover {
-      background: var(--awsm-color-secondary-main);
+      background: var(--awsm-color-secondary-tint);
     }
   }
 
   .nav a.active {
-    background: var(--awsm-color-secondary-main);
+    background: var(--awsm-color-secondary-tint);
   }
 </style>
