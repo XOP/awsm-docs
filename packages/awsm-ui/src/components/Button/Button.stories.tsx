@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { __DemoFlow__ } from '../../helpers';
 
-import ButtonNext from './Button';
+import Button from './Button';
 
 export default {
   title: 'Form/Button',
-  component: ButtonNext,
+  component: Button,
   parameters: {
     layout: 'centered',
     docs: {
@@ -16,9 +16,9 @@ export default {
     },
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof ButtonNext>;
+} satisfies Meta<typeof Button>;
 
-export type Story = StoryObj<typeof ButtonNext>;
+export type Story = StoryObj<typeof Button>;
 
 export const Base: Story = {
   args: {
@@ -92,15 +92,15 @@ export const SizeLarge: Story = {
 export const AllVariantsPrimary: Story = {
   render: () => (
     <__DemoFlow__>
-      <ButtonNext color="primary" variant="solid">
+      <Button color="primary" variant="solid">
         Solid
-      </ButtonNext>
-      <ButtonNext color="primary" variant="ghost">
+      </Button>
+      <Button color="primary" variant="ghost">
         Ghost
-      </ButtonNext>
-      <ButtonNext color="primary" variant="text">
+      </Button>
+      <Button color="primary" variant="text">
         Text
-      </ButtonNext>
+      </Button>
     </__DemoFlow__>
   ),
 };
@@ -108,15 +108,15 @@ export const AllVariantsPrimary: Story = {
 export const AllVariantsSecondary: Story = {
   render: () => (
     <__DemoFlow__>
-      <ButtonNext color="secondary" variant="solid">
+      <Button color="secondary" variant="solid">
         Solid
-      </ButtonNext>
-      <ButtonNext color="secondary" variant="ghost">
+      </Button>
+      <Button color="secondary" variant="ghost">
         Ghost
-      </ButtonNext>
-      <ButtonNext color="secondary" variant="text">
+      </Button>
+      <Button color="secondary" variant="text">
         Text
-      </ButtonNext>
+      </Button>
     </__DemoFlow__>
   ),
 };
