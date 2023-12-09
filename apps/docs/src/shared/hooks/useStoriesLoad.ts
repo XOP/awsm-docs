@@ -1,3 +1,7 @@
+// NOTE: current hook is not used
+// in favor of atomic loading with useStoryLoad
+// left for reference purposes
+
 import { useState, useEffect } from 'react';
 
 import { type Stories } from '../types';

@@ -7,3 +7,4 @@ export type ComponentStruct = Meta<ComponentProps<AllProps>>;
 
 export type Story = StoryObj<ComponentProps<AllProps>>;
 export type Stories = Record<string, Story>;
+export type StoriesCollection = Array<[string, Story | undefined]>;

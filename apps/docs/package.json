@@ -38,6 +38,7 @@
     "react-dom": "^18.2.0",
     "react-element-to-jsx-string": "^15.0.0",
     "react-syntax-highlighter": "^15.5.0",
+    "slugify": "^1.6.6",
     "store2": "^2.14.2"
   },
   "devDependencies": {

@@ -2,7 +2,7 @@ import { tokens } from '@awsm/tokens';
 import clsx from 'clsx';
 import jsxToString from 'react-element-to-jsx-string';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialOceanic } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { coldarkDark as theme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useStore } from '@nanostores/react';
 
 import Button from '../Button/Button';
@@ -33,10 +33,10 @@ const SourceCode = (props: SourceCodeProps) => {
         <SyntaxHighlighter
           language="tsx"
           style={{
-            ...materialOceanic,
+            ...theme,
             ...{
               'pre[class*="language-"]': {
-                ...materialOceanic['pre[class*="language-"]'],
+                ...theme['pre[class*="language-"]'],
 
                 margin: 0,
                 padding: tokens.space[8],

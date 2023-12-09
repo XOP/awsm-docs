@@ -46,6 +46,11 @@ export const EXAMPLE_SORT_KEYS = [
   'with'
 ];
 
+export const EXAMPLE_STATE = {
+  loading: 'loading',
+  idle: 'idle',
+} as const;
+
 export const LS_PREFIX = 'awsm';
 export const LS_KEY_META = 'meta';
 
