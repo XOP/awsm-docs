@@ -2,7 +2,8 @@
   "name": "docs",
   "type": "module",
   "version": "0.0.0",
-  "author": "Evgeny Khoroshilov",
+  "author": "Evgeny Khoroshilov (https://github.com/XOP)",
+  "homepage": "https://awsm-docs.vercel.app/",
   "license": "MIT",
   "private": true,
   "scripts": {
