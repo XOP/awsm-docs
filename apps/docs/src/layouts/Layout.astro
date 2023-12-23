@@ -13,6 +13,7 @@ interface Props {
 
 const { title, section, showNav = true } = Astro.props;
 const isIndex = Astro.url.pathname === "/";
+const showMenu = showNav && !isIndex;
 
 import "@csstools/normalize.css/normalize.css";
 import "@awsm/tokens/css/tokens.css";
@@ -36,10 +37,10 @@ import "../assets/css/index.css";
   </head>
   <body>
     <div class="page">
-      <Header class="header" />
+      <Header class="header" showMenuToggle={showMenu} />
 
       <div class="wrap">
-        {showNav && !isIndex && <Sidebar class="side" section={section} />}
+        {showMenu && <Sidebar class="side" section={section} />}
 
         <main class="main">
           <div class={`content${isIndex ? ' __index' : ''}`}>
@@ -132,7 +133,6 @@ import "../assets/css/index.css";
     flex: 0 1 auto;
   }
 </style>
-
 
 <script is:inline>
   history.scrollRestoration = 'manual';
