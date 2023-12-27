@@ -61,7 +61,11 @@ if (section === NAVIGATION_KEYS.components) {
   ];
 }
 
-const fullSlug = Astro.url.pathname.split("/");
+const pathName = Astro.url.pathname.endsWith('/')
+  ? Astro.url.pathname.slice(0, -1)
+  : Astro.url.pathname;
+
+const fullSlug = pathName.split('/');
 let currentSlug = fullSlug.reverse()[0];
 
 if (currentSlug === "usage" || currentSlug === "accessibility") {
