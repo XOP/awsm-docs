@@ -58,7 +58,7 @@ however you would need to adjust settings in `.storybook` and `astro.config.mjs`
 
 Install project dependencies:
 ```sh
-yarn install
+pnpm i
 ```
 
 Run Storybook:

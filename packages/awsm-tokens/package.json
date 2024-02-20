@@ -22,8 +22,8 @@
   },
   "scripts": {
     "lint": "eslint \"src/**/*.ts*\"",
-    "build": "yarn gen && tsc && vite build",
-    "gen": "yarn gen:palette && yarn gen:vars",
+    "build": "pnpm gen && tsc && vite build",
+    "gen": "pnpm gen:palette && pnpm gen:vars",
     "gen:vars": "tsx ./scripts/generateVars.cts",
     "gen:palette": "tsx ./scripts/generatePaletteVars.cts"
   },

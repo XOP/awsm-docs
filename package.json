@@ -4,12 +4,9 @@
   "homepage": "https://github.com/XOP/awsm-docs",
   "license": "MIT",
   "private": true,
-  "packageManager": "yarn@1.22.19",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "packageManager": "pnpm@8.15.1",
   "devDependencies": {
+    "@types/node": "^20.11.19",
     "nx": "17.1.1",
     "prettier": "^3.0.3",
     "tsx": "^4.1.1"
