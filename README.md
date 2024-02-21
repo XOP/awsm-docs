@@ -1,5 +1,7 @@
 # AWSM Design System Documentation Website Slingshot 
 
+> See it in [Action](https://awsm-docs.vercel.app/)
+
 ## About
 
 AWSM Docs is practically a template for a quick scaffolding of Design System (or UI library) documentation.  
