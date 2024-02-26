@@ -7,7 +7,6 @@
 AWSM Docs is practically a template for a quick scaffolding of Design System (or UI library) documentation.  
 It is built with [Astro](https://astro.build/) and relies on [MDX](https://docs.astro.build/en/guides/markdown-content/) for documentation, which is non-developer friendly. However the most interesting part is using [Storybook](https://storybook.js.org/) stories format both for development and examples in the docs website.
 
-
 ## Contents
 
 Repo is organized with [nx](https://nx.dev/) and split into apps and packages.  
@@ -88,6 +87,16 @@ which gives a solid kickstart, yet there are many things that can be improved fu
 
 Components in docs are intentionally under-styled, just to give a sense of presentation.  
 Same for functionality, pages, structure - everything can be tweaked or removed for your benefit.  
+
+
+## Extras
+
+To learn more about the project in less technical terms welcome to check out the article on your favorite platform:
+
+- [Medium](https://medium.com/@genedesign/how-to-build-awsm-docs-07375167a6b2)
+- [dev.to](https://dev.to/genedesign/how-to-build-awsm-docs-with-storybook-and-astro-4ego)
+- [Hasnode](https://designtokens.hashnode.dev/awsm-docs-with-storybook-and-astro)
+- [Substack](https://genedesign.substack.com/p/how-to-build-awsm-docs)
 
 
 ## [LICENSE](./LICENSE)
